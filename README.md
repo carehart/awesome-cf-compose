@@ -1,5 +1,13 @@
-# awesome-cf-compose
-A repository of Docker Compose examples for use with the Adobe ColdFusion Docker images, based on the concept found in the more general-purpose https://github.com/docker/awesome-compose project.
+# Awesome CF compose  [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+
+A curated list of Docker Compose samples for use with the Adobe ColdFusion Docker images, based on the concept found in the more general-purpose https://github.com/docker/awesome-compose project.
+
+These samples provide a starting point for how to integrate different services using a Compose file and to manage their deployment with Docker Compose.
+
+<!--lint disable awesome-toc-->
+## Contents
+- [Many kinds of examples planned](#Many-kinds-of-examples-planned).
+
 
 # Many kinds of examples planned
 In this project, the focus will be on examples of the many kinds of intergrations that are possible and potentially useful for users of ColdFusion, ranging from optional web servers that can front it, to back-end databases resources it can intergrate with, such as databases and caching engines--whether leveraging such integrations built-in to CF or not. 
