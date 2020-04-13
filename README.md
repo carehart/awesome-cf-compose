@@ -7,8 +7,8 @@ These examples provide a starting point for how to integrate different services 
 ## Contents
 
 - [Many kinds of examples planned](#Many-kinds-of-examples-planned)
-- [Getting Started](#Getting-Started)
-- [Considerations regarding the configuration of examples](#Considerations-regarding-the-configuration-of-examples)
+- [Getting started](#Getting-started)
+- [Considerations regarding configuration](#Considerations-regarding-configuration)
 - [Contribute](#Contribute)
 
 
@@ -51,7 +51,7 @@ To stop and remove the all containers of the example application, run:
 docker-compose down
 ```
 
-# Considerations regarding the configuration of examples
+# Considerations regarding configuration
 
 Whether using or contributing to the repository, note  the following considerations.
 
