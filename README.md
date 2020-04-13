@@ -8,6 +8,7 @@ These samples provide a starting point for how to integrate different services u
 
 - [Many kinds of examples planned](#Many-kinds-of-examples-planned)
 - [Getting Started](#Getting-Started)
+- [Single service samples](#single-service-samples).
 - [Considerations regarding the configuration of examples] {#Considerations-regarding-the-configuration-of-examples)
 - [Contribute] (#Contribute)
 
