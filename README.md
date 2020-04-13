@@ -7,7 +7,7 @@ These samples provide a starting point for how to integrate different services u
 ## Contents
 
 - [Many kinds of examples planned](#Many-kinds-of-examples-planned).
-- [Getting Started] (#Getting started).
+- [Getting Started] (#Getting-started).
 - [Considerations regarding the configuration of examples] {#Considerations-regarding-the-configuration-of-examples)
 - [Contribute] (#Contribute)
 
