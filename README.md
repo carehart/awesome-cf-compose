@@ -1,8 +1,8 @@
 # Awesome CF compose  [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated list of Docker Compose samples for use with the Adobe ColdFusion Docker images, based on the concept found in the more general-purpose https://github.com/docker/awesome-compose project.
+A curated list of Docker Compose examples for use with the Adobe ColdFusion Docker images, based on the concept found in the more general-purpose https://github.com/docker/awesome-compose project.
 
-These samples provide a starting point for how to integrate different services using a Compose file and to manage their deployment with Docker Compose.
+These examples provide a starting point for how to integrate different services using a Compose file and to manage their deployment with Docker Compose.
 
 ## Contents
 
@@ -22,8 +22,7 @@ The project is also expected to include examples of integrating with things like
 
 # Getting started
 
-These instructions will get you through the bootstrap phase of creating and
-deploying samples of containerized applications with Docker Compose.
+These instructions will get you through the bootstrap phase of creating and deploying examples of containerized applications with Docker Compose.
 
 ## Prerequisites
 
@@ -32,22 +31,21 @@ deploying samples of containerized applications with Docker Compose.
     [Install Docker Desktop](https://www.docker.com/get-started)
   - Linux: [Install Docker](https://www.docker.com/get-started) and then
     [Docker Compose](https://github.com/docker/compose)
-- Download some or all of the samples from this repository.
+- Download some or all of the examples from this repository.
 
-## Running a sample
+## Running an example
 
-The root directory of each sample contains the `docker-compose.yaml` which
-describes the configuration of service components. All samples can be run in
+The root directory of each example contains the `docker-compose.yaml` which
+describes the configuration of service components. All examples can be run in
 a local environment by going into the root directory of each one and executing:
 
 ```console
 docker-compose up -d
 ```
 
-Check the `README.md` of each sample to get more details on the structure and
-what is the expected output.
+Check the `README.md` of each example to get more details on the structure and expected output, if any.
 
-To stop and remove the all containers of the sample application run:
+To stop and remove the all containers of the example application, run:
 
 ```console
 docker-compose down
