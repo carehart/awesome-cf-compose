@@ -17,7 +17,7 @@ In this project, the focus will be on examples of the many kinds of intergration
 
 The project is also expected to include examples of integrating with things like the ColdFusion API Manager (since CF2016 Enterprise) and the ColdFusion Performance Monitoring Toolkit (since CF2018 Standard and Enterprise), as well as demonstrations of implementation of other monitoring solutions, such as FusionReactor, SeeFusion, and other APMs.
 
-[Contributions] (#Contributions) are welcome.
+[Contributions](#Contributions) are welcome.
 
 
 # Getting started
