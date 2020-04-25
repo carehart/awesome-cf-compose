@@ -7,10 +7,10 @@ These examples provide a starting point for how to integrate different services 
 ## Contents
 - [Example Docker Compose files for ColdFusion configuration variations](Example-Docker-Compose-files-for-ColdFusion-configuration-variations)
 - [Examples of Docker feature enablement](Examples-of-Docker-feature-enablement)
-- [Examples of multiple integrated services](Examples-of-multiple-integrated-services)
-- [Many kinds of examples planned](#Many-kinds-of-examples-planned)
+- [Examples of integrated services](Examples-of-integrated-services)
 - [Getting started](#Getting-started)
 - [Considerations regarding configuration](#Considerations-regarding-configuration)
+- [Many kinds of examples planned](#Many-kinds-of-examples-planned)
 - [Contribute](#Contribute)
 
 ## Example Docker Compose files for ColdFusion configuration variations
@@ -37,16 +37,29 @@ These examples provide a starting point for how to integrate different services 
 - ColdFusion with CF webroot as host bind mount
 - ColdFusion with CF webroot as Docker volume
 
-## Examples of multiple integrated services
+## Examples of integrated services
+
+### Examples of web server integration
 - ColdFusion with Apache web server
 - ColdFusion with IIS web server
+- ColdFusion with nginx web server
 
-## Many kinds of examples planned
-In this project, the focus will be on examples of the many kinds of intergrations that are possible and potentially useful for users of ColdFusion, ranging from optional web servers that can front it, to back-end databases resources it can intergrate with, such as databases and caching engines--whether leveraging such integrations built-in to CF or not. 
+### Examples of database integration
+- ColdFusion with MySQL
+- ColdFusion with SQL Server
+- ColdFusion with Postgres
+- ColdFusion with MongoDB
 
-The project is also expected to include examples of integrating with things like the ColdFusion API Manager (since CF2016 Enterprise) and the ColdFusion Performance Monitoring Toolkit (since CF2018 Standard and Enterprise), as well as demonstrations of implementation of other monitoring solutions, such as FusionReactor, SeeFusion, and other APMs.
+### Examples of reverse proxies/load balancers
+- ColdFusion with Varnish
+- ColdFusion with Squid
+- ColdFusion with Traefik
 
-[Contributions](#Contributions) are welcome.
+### Other integrations
+- ColdFusion with ?
+
+### Examples of multiple integrated services
+- ColdFusion with ?
 
 ## Getting started
 
@@ -97,6 +110,15 @@ Such examples are necesary to meet real-world requirements as folks explore CF D
 
 ### Use of volumes or bind mounts
 Similarly, some examples will demonstrate integration with Docker volumes (defined in the compose file) while others may demonstrate using bind-mount volumes that refer to host resources outside the docker file which again, if not existing, will cause the compose file to fail. Comments in the compose file or readme should clarify such expected dependencies, if they are not self-evident.
+
+## Many kinds of examples planned
+In this project, the focus will be on examples of the many kinds of intergrations that are possible and potentially useful for users of ColdFusion, ranging from optional web servers that can front it, to back-end databases resources it can intergrate with, such as databases and caching engines--whether leveraging such integrations built-in to CF or not. 
+
+The project is also expected to include examples of integrating with things like the ColdFusion API Manager (since CF2016 Enterprise) and the ColdFusion Performance Monitoring Toolkit (since CF2018 Standard and Enterprise), as well as demonstrations of implementation of other monitoring solutions, such as FusionReactor, SeeFusion, and other APMs.
+
+[Contributions](#Contributions) are welcome.
+
+
 
 <!--lint disable awesome-toc-->
 ## Contribute
