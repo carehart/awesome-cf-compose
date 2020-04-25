@@ -6,6 +6,7 @@ These examples provide a starting point for how to integrate different services 
 
 ## Contents
 - [Example Docker Compose files for ColdFusion configuration variations](Example-Docker-Compose-files-for-ColdFusion-configuration-variations)
+- [Examples of Docker feature enablement](Examples-of-Docker-feature-enablement)
 - [Examples of multiple integrated services](Examples-of-multiple-integrated-services)
 - [Many kinds of examples planned](#Many-kinds-of-examples-planned)
 - [Getting started](#Getting-started)
@@ -13,26 +14,32 @@ These examples provide a starting point for how to integrate different services 
 - [Contribute](#Contribute)
 
 ## Example Docker Compose files for ColdFusion configuration variations
-- [`ColdFusion 2018`](https://github.com/carehart/awesome-cf-compose/tree/master/coldfusion-2018) - Sample ColdFusion 2018 container
-- ColdFusion 2018 Update 1
-- ColdFusion 2016
-- ColdFusion 2018 with setup script enabled
-- ColdFusion 2018 with admin config via CAR file
-- ColdFusion 2018 with secure profile enabled
-- ColdFusion 2018 with mysql jar embedded
+- [`ColdFusion`](https://github.com/carehart/awesome-cf-compose/tree/master/coldfusion) (base CF image, latest image)
+- ColdFusion 2018 
+- ColdFusion 2016 
+- ColdFusion 2018 Update 1 (how to indicate update level)
+- ColdFusion with setup script enabled
+- ColdFusion with admin config via CAR file
+- ColdFusion with secure profile enabled
+- ColdFusion with mysql jar embedded
 
-## Examples of CF feature enablement
-- ColdFusion 2018 with Solr feature enabled
-- ColdFusion 2018 with PDFg (CFHTML2PDF) feature enabled
-- ColdFusion 2018 with Redis sessions enabled
+### Examples of CF feature enablement
+- ColdFusion with Solr feature enabled
+- ColdFusion with PDFg (CFHTML2PDF) feature enabled
+- ColdFusion with Redis sessions enabled
 
 ### Examples of related feature enablements
-- ColdFusion 2018 with PMT enabled
-- ColdFusion 2018 with API Manager enabled
+- ColdFusion with PMT enabled
+- ColdFusion with API Manager enabled
+
+## Examples of Docker feature enablement
+- ColdFusion with CF webroot copied into image
+- ColdFusion with CF webroot as host bind mount
+- ColdFusion with CF webroot as Docker volume
 
 ## Examples of multiple integrated services
-- ColdFusion 2018 with Apache web server
-- ColdFusion 2018 with IIS web server
+- ColdFusion with Apache web server
+- ColdFusion with IIS web server
 
 ## Many kinds of examples planned
 In this project, the focus will be on examples of the many kinds of intergrations that are possible and potentially useful for users of ColdFusion, ranging from optional web servers that can front it, to back-end databases resources it can intergrate with, such as databases and caching engines--whether leveraging such integrations built-in to CF or not. 
