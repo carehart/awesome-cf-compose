@@ -20,10 +20,10 @@ For now, the lists below are from my initial effort that was laying out how to s
 - [Contribute](#Contribute)
 
 ## Example Docker Compose files for ColdFusion configuration variations
-- [`ColdFusion`](https://github.com/carehart/awesome-cf-compose/tree/master/coldfusion) (base CF image, latest image)
-- ColdFusion 2018 
+- ColdFusion (showing base CF image/latest image)
+- ColdFusion 2018 (showing how to specify CF version)
 - ColdFusion 2016 
-- ColdFusion 2018 Update 1 (how to indicate update level)
+- ColdFusion 2018 Update 1 (showing how to specify CF update level)
 - ColdFusion with setup script enabled
 - ColdFusion with admin config via CAR file
 - ColdFusion with secure profile enabled
@@ -62,10 +62,11 @@ For now, the lists below are from my initial effort that was laying out how to s
 - ColdFusion with Traefik
 
 ### Other integrations
-- ColdFusion with ?
+- ColdFusion with ? (let's generate ideas, and implement them)
 
 ### Examples of multiple integrated services
-- ColdFusion with ?
+- ColdFusion with ? (a couple of examples)
+Not intending to all possible permutations of the above. See [Considerations regarding configuration](Considerations-regarding-configuration).
 
 ## Getting started
 
