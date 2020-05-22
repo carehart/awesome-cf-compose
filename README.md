@@ -66,7 +66,8 @@ For now, the lists below are from my initial effort that was laying out how to s
 
 ### Examples of multiple integrated services
 - ColdFusion with ? (a couple of examples)
-Not intending to all possible permutations of the above. See [Considerations regarding configuration](Considerations-regarding-configuration).
+
+Not intending to all possible permutations of the above service integration examples. See [Considerations regarding configuration](Considerations-regarding-configuration), for more.
 
 ## Getting started
 
