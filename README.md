@@ -2,7 +2,7 @@
 
 A curated list of Docker Compose examples for use with the ColdFusion Docker images, whether the [CF images from Adobe](https://bintray.com/eaps/coldfusion), or the [Ortus CommandBox images](https://hub.docker.com/r/ortussolutions/commandbox/) for CF or Lucee, or the [native Lucee images](https://hub.docker.com/r/lucee/lucee). This effort is based on the concept found in the more general-purpose https://github.com/docker/awesome-compose project, but has been created separately to focus on aspects of CF-oriented container  processing.
 
-These examples will provide a starting point for how to integrate different services using a Compose file and to manage their deployment with Docker Compose. (And starting with Compose is a great first step to ultimate orchestration on containers, so regard these as such: a starting point for your further exploration and learning.)
+These examples will provide a starting point for how to integrate different services using a Compose file and to manage their deployment with Docker Compose. (And starting with Compose is a great first step to ultimate orchestration of containers--whether via Kubernetes, Swarm, or otherwise. So regard these as such: a starting point for your further exploration and learning.)
 
 Initially I planned this to be just about the Adobe CF Docker images (since there's a general paucity of such info), but I appreciate how those using the other types of CF images could not only benefit from but also bring energy and great contributions to this effort.
 
