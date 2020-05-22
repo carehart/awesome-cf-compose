@@ -1,8 +1,14 @@
 # Awesome CF compose  [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated list of Docker Compose examples for use with the Adobe ColdFusion Docker images, based on the concept found in the more general-purpose https://github.com/docker/awesome-compose project.
+A curated list of Docker Compose examples for use with the ColdFusion Docker images, whether those from Adobe, or the Ortus CommandBox images for CF or Lucee, or the Lucee images. This effort is based on the concept found in the more general-purpose https://github.com/docker/awesome-compose project, but has been created separately to focus aspects of on CF-oriented container  processing.
 
 These examples provide a starting point for how to integrate different services using a Compose file and to manage their deployment with Docker Compose.
+
+Initially I planned this to be just about the Adobe CF Docker images, but I appreciate how those using the other types of CF images could not only benefit from but also bring energy and contribution to this effort.
+
+A challenge will be how to clarify which compose files are suited to the ACF vs Ortus CF or Lucee vs Lucee images. I haven't decided yet if that's best done by separate folders, or indications in the compose file name. I'm leaning toward folders. Even then, this could be a challenge to manage, but let's go for it!
+
+For now, the lists below are from my initial effort that was laying out how to show use of the ACF images. The lists will evolve to more clearly cover all 3 kinds of images, where appropriate.
 
 ## Contents
 - [Example Docker Compose files for ColdFusion configuration variations](Example-Docker-Compose-files-for-ColdFusion-configuration-variations)
