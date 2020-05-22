@@ -1,12 +1,12 @@
 # Awesome CF compose  [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated list of Docker Compose examples for use with the ColdFusion Docker images, whether those from Adobe, or the Ortus CommandBox images for CF or Lucee, or the Lucee images. This effort is based on the concept found in the more general-purpose https://github.com/docker/awesome-compose project, but has been created separately to focus aspects of on CF-oriented container  processing.
+A curated list of Docker Compose examples for use with the ColdFusion Docker images, whether the [CF images from Adobe](https://bintray.com/eaps/coldfusion), or the [Ortus CommandBox images](https://hub.docker.com/r/ortussolutions/commandbox/) for CF or Lucee, or the [native Lucee images](https://hub.docker.com/r/lucee/lucee). This effort is based on the concept found in the more general-purpose https://github.com/docker/awesome-compose project, but has been created separately to focus on aspects of CF-oriented container  processing.
 
-These examples provide a starting point for how to integrate different services using a Compose file and to manage their deployment with Docker Compose.
+These examples will provide a starting point for how to integrate different services using a Compose file and to manage their deployment with Docker Compose. (And starting with Compose is a great first step to ultimate orchestration on containers, so regard these as such: a starting point for your further exploration and learning.)
 
-Initially I planned this to be just about the Adobe CF Docker images, but I appreciate how those using the other types of CF images could not only benefit from but also bring energy and contribution to this effort.
+Initially I planned this to be just about the Adobe CF Docker images (since there's a general paucity of such info), but I appreciate how those using the other types of CF images could not only benefit from but also bring energy and great contributions to this effort.
 
-A challenge will be how to clarify which compose files are suited to the ACF vs Ortus CF or Lucee vs Lucee images. I haven't decided yet if that's best done by separate folders, or indications in the compose file name. I'm leaning toward folders. Even then, this could be a challenge to manage, but let's go for it!
+A challenge will be how to clarify which compose files are suited to the ACF vs the Ortus CF or Lucee vs the native Lucee images. I haven't decided yet if that's best done by separate folders, or indications in the compose file name. I'm leaning toward folders. Even then, this could be a challenge to manage, but let's go for it!
 
 For now, the lists below are from my initial effort that was laying out how to show use of the ACF images. The lists will evolve to more clearly cover all 3 kinds of images, where appropriate.
 
