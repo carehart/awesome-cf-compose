@@ -1,14 +1,9 @@
 # Awesome CF compose  [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated list of Docker Compose examples for use with the ColdFusion Docker images, whether the [CF images from Adobe](https://bintray.com/eaps/coldfusion), or the [Ortus CommandBox images](https://hub.docker.com/r/ortussolutions/commandbox/) for CF or Lucee, or the [native Lucee images](https://hub.docker.com/r/lucee/lucee). This effort is based on the concept found in the more general-purpose https://github.com/docker/awesome-compose project, but has been created separately to focus on aspects of CF-oriented container  processing.
+A curated list of Docker Compose examples for use with ColdFusion Docker images, whether the [CF images from Adobe](https://bintray.com/eaps/coldfusion), or the [Ortus CommandBox images](https://hub.docker.com/r/ortussolutions/commandbox/) for CF or Lucee, or the [native Lucee images](https://hub.docker.com/r/lucee/lucee). This effort is based on the concept found in the more general-purpose https://github.com/docker/awesome-compose project, but has been created separately to focus on aspects of CF-oriented integration and container processing.
 
-These examples will provide a starting point for how to integrate different services using a Compose file and to manage their deployment with Docker Compose. (And starting with Compose is a great first step to ultimate orchestration of containers--whether via Kubernetes, Swarm, or otherwise. So regard these as such: a starting point for your further exploration and learning.)
+These examples will provide a starting point for how to integrate different services and manage their deployment with Docker Compose. (Starting with Compose is a great first step to ultimate orchestration of containers--whether via Kubernetes, Swarm, or otherwise. So regard this as such: a starting point for your further exploration and learning, however you may deploy containers.)
 
-Initially I planned this to be just about the Adobe CF Docker images (since there's a general paucity of such info), but I appreciate how those using the other types of CF images could not only benefit from but also bring energy and great contributions to this effort.
-
-A challenge will be how to clarify which compose files are suited to the ACF vs the Ortus CF or Lucee vs the native Lucee images. I haven't decided yet if that's best done by separate folders, or indications in the compose file name. I'm leaning toward folders. Even then, this could be a challenge to manage, but let's go for it!
-
-For now, the lists below are from my initial effort that was laying out how to show use of the ACF images. The lists will evolve to more clearly cover all 3 kinds of images, where appropriate.
 
 ## Contents
 - [Example Docker Compose files for ColdFusion configuration variations](Example-Docker-Compose-files-for-ColdFusion-configuration-variations)
@@ -22,7 +17,7 @@ For now, the lists below are from my initial effort that was laying out how to s
 ## Example Docker Compose files for ColdFusion configuration variations
 - ColdFusion (showing base CF image/latest image)
 - ColdFusion 2018 (showing how to specify CF version)
-- ColdFusion 2016 
+- ColdFusion 2016
 - ColdFusion 2018 Update 1 (showing how to specify CF update level)
 - ColdFusion with setup script enabled
 - ColdFusion with admin config via CAR file
@@ -105,24 +100,30 @@ docker-compose down
 Whether using or contributing to the repository, note  the following considerations.
 
 ### Limiting the combinations of examples
-It would be tempting to create compose files that combine many things at once (intergration of CF with Apache and mysql, or CF/Apache/mysql and the PMT, or CF/Apache/mysql and FR, or swapping out mysql for SQL Server, or IIS for Apache, and so on). 
+It would be tempting to create compose files that combine many things at once (integration of CF with Apache and mysql, or CF/Apache/mysql and the PMT, or CF/Apache/mysql and FR, or swapping out mysql for SQL Server, or IIS for Apache, and so on).
 
-Because the number of such combinations could grow exponentially (and become clumsy to manage as a folder structure), there will be many cases where a given facet of intergration will be demonstrated only once, in a single compose file, leaving the reader to take that information to bring together unique combinations on one or more other integrations which they may be interested to use. 
+Because the number of such combinations could grow exponentially (and become clumsy to manage as a folder structure), there will be many cases where a given facet of integration will be demonstrated only once, in a single compose file, leaving the reader to take that information to bring together unique combinations on one or more other integrations which they may be interested to use.
 
-Time will tell how to best organize when contributors may offer examples combining several intergrations in one compose file.
+Time will tell how to best organize when contributors may offer examples combining several integrations in one compose file.
 
 ### Some examples will presume dependencies and so not be self-contained
-While many integrations will be shown using resources ALSO found in the compose file (making it self-contained), as is the normal expectation for compose files, some examples will be setup presuming instead to integrate with some resource existing OUTSIDE of the compose file, such as a mysql server defined on or in the network of the host. 
+While many integrations will be shown using resources ALSO found in the compose file (making it self-contained), as is the normal expectation for compose files, some examples will be setup presuming instead to integrate with some resource existing OUTSIDE of the compose file, such as a mysql server defined on or in the network of the host.
 
-Such examples are necesary to meet real-world requirements as folks explore CF Docker images and integrations. Obviously, such examples will have dependencies which, if not existing, will cause the compose file to fail. 
+Such examples are necesary to meet real-world requirements as folks explore CF Docker images and integrations. Obviously, such examples will have dependencies which, if not existing, will cause the compose file to fail.
 
 ### Use of volumes or bind mounts
 Similarly, some examples will demonstrate integration with Docker volumes (defined in the compose file) while others may demonstrate using bind-mount volumes that refer to host resources outside the docker file which again, if not existing, will cause the compose file to fail. Comments in the compose file or readme should clarify such expected dependencies, if they are not self-evident.
 
 ## Many kinds of examples planned
-In this project, the focus will be on examples of the many kinds of intergrations that are possible and potentially useful for users of ColdFusion, ranging from optional web servers that can front it, to back-end databases resources it can intergrate with, such as databases and caching engines--whether leveraging such integrations built-in to CF or not. 
+In this project, the focus will be on examples of the many kinds of integrations that are possible and potentially useful for users of CFML engines, ranging from optional web servers that can front it, to back-end databases resources it can integrate with, such as databases and caching engines--whether leveraging such integrations built-in to CF or not.
 
-The project is also expected to include examples of integrating with things like the ColdFusion API Manager (since CF2016 Enterprise) and the ColdFusion Performance Monitoring Toolkit (since CF2018 Standard and Enterprise), as well as demonstrations of implementation of other monitoring solutions, such as FusionReactor, SeeFusion, and other APMs.
+Initially I planned this to be just about the Adobe CF Docker images (since there's a general paucity of such info), but I appreciate how those using the other types of CF images could not only benefit from but also bring energy and great contributions to this effort.
+
+A challenge will be how to clarify which compose files are suited to the ACF vs the Ortus CF or Lucee vs the native Lucee images. I haven't decided yet if that's best done by separate folders, or indications in the compose file name. I'm leaning toward folders. Even then, this could be a challenge to manage, but let's go for it!
+
+For now, the lists below are from my initial effort that was laying out how to show use of the ACF images. The lists will evolve to more clearly cover all 3 kinds of images, where appropriate.
+
+Speaking of ACF, the project is also expected to include examples of integrating with things like the ColdFusion API Manager (since CF2016 Enterprise) and the ColdFusion Performance Monitoring Toolkit (since CF2018 Standard and Enterprise), as well as demonstrations of implementation of other monitoring solutions, such as FusionReactor, SeeFusion, and other APMs.
 
 [Contributions](#Contributions) are welcome.
 
@@ -131,4 +132,4 @@ The project is also expected to include examples of integrating with things like
 <!--lint disable awesome-toc-->
 ## Contribute
 
-We welcome examples that help people understand how to use Docker Compose for common applications. Check the [Contribution Guide](CONTRIBUTING.md) for more details. 
+We welcome examples that help people understand how to use Docker Compose for common applications. Check the [Contribution Guide](CONTRIBUTING.md) for more details.
