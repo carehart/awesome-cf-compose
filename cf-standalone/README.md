@@ -57,7 +57,7 @@ b8852a7be416        eaps-docker-coldfusion.bintray.io/cf/coldfusion:latest   "sh
 
 After the application starts, navigate to `http://localhost:8500` in your web browser or run:
 ```
-$ curl localhost:8500
+$ curl localhost:8500/test.cfm
 Hello World!
 ```
 
