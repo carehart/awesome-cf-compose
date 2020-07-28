@@ -15,7 +15,7 @@ These examples will provide a starting point for how to integrate different serv
 - [Contribute](#Contribute)
 
 ## Example Docker Compose files for ColdFusion configuration variations
-- ColdFusion (showing base CF image/latest image)
+- [ColdFusion (showing base CF image/latest image)](/cf-standalone)
 - ColdFusion 2018 (showing how to specify CF version)
 - ColdFusion 2016
 - ColdFusion 2018 Update 1 (showing how to specify CF update level)
