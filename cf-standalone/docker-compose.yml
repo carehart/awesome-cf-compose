@@ -3,7 +3,9 @@ services:
     coldfusion: 
         image: eaps-docker-coldfusion.bintray.io/cf/coldfusion:latest
         ports:
-        - "8501:8500"
+        - "8500:8500"
         environment:
             - acceptEULA=YES
             - password=123
+        volumes:
+            - ./app:/app
