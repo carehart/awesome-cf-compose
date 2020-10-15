@@ -1,0 +1,38 @@
+version: "3" 
+services:
+     
+    coldfusion:
+        container_name: coldfusion
+        image: eaps-docker-coldfusion.bintray.io/cf/coldfusion 
+        ports:
+        - "8500:8500"
+        volumes:
+        - "./webroot:/app"
+        env_file:
+        - coldfusion.env
+        healthcheck:
+           test: curl -f http://localhost:8500/ 
+           interval: 1m
+           timeout: 3s
+        networks:
+        - webnet
+ 
+    pmt: 
+       # default username and password are admin/admin 
+       container_name: pmt
+       image: eaps-docker-coldfusion.bintray.io/cf/pmt
+       depends_on:
+       - coldfusion
+       ports:
+       - "9101:9101"
+       env_file:
+       - pmt.env
+       healthcheck:
+          test: curl -f http://localhost:9101/  
+          interval: 1m
+          timeout: 3s
+       networks: 
+       - webnet
+ 
+networks:
+    webnet:
