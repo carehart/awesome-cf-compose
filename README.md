@@ -50,7 +50,7 @@ So regard this as a starting point for your further exploration, learning, and d
 ### Examples of web server integration
 - ColdFusion with Apache web server
 - ColdFusion with IIS web server
-- ColdFusion with nginx web server
+- [ColdFusion with nginx web server](/cf-nginx)
 
 ### Examples of database integration
 - ColdFusion with MySQL
