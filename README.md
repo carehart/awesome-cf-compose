@@ -12,9 +12,9 @@ So regard this as a starting point for your further exploration, learning, and d
 
 
 ## Contents
-- [Example Docker Compose files for ColdFusion configuration variations](Example-Docker-Compose-files-for-ColdFusion-configuration-variations)
-- [Examples of Docker feature enablement](Examples-of-Docker-feature-enablement)
-- [Examples of integrated services](Examples-of-integrated-services)
+- [Example Docker Compose files for ColdFusion configuration variations](#Example-Docker-Compose-files-for-ColdFusion-configuration-variations)
+- [Examples of Docker feature enablement](#Examples-of-Docker-feature-enablement)
+- [Examples of integrated services](#Examples-of-integrated-services)
 - [Getting started](#Getting-started)
 - [Considerations regarding configuration](#Considerations-regarding-configuration)
 - [Many kinds of examples planned](#Many-kinds-of-examples-planned)
