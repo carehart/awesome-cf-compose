@@ -4,7 +4,7 @@
 Project structure:
 ```
 .
-├── docker-compose.yaml
+├── docker-compose.yml
 ├── app
     └── test.cfm
 
@@ -28,9 +28,9 @@ services:
 
 ```
 $ docker-compose up -d
-Creating network "cf-latest_default" with the default driver
-Creating cf-latest_coldfusion_1 ... done
-Attaching to cf-latest_coldfusion_1
+Creating network "cf-2021_default" with the default driver
+Creating cf-2021_coldfusion_1 ... done
+Attaching to cf-2021_coldfusion_1
 coldfusion_1  | Updating webroot to /app
 coldfusion_1  | Configuring virtual directories
 coldfusion_1  | Updating password
