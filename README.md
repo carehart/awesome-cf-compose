@@ -1,8 +1,14 @@
 # Awesome CF compose  [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated list of Docker Compose examples for use with ColdFusion Docker images, whether the [CF images from Adobe](https://bintray.com/eaps/coldfusion), or the [Ortus CommandBox images](https://hub.docker.com/r/ortussolutions/commandbox/) for CF or Lucee, or the [native Lucee images](https://hub.docker.com/r/lucee/lucee). This effort is based on the concept found in the more general-purpose https://github.com/docker/awesome-compose project, but has been created separately to focus on aspects of CF-oriented integration and container processing.
+A curated list of Docker Compose examples for use with CFML Docker images, whether the [CF images from Adobe](https://bintray.com/eaps/coldfusion), or the [Ortus CommandBox images](https://hub.docker.com/r/ortussolutions/commandbox/) for CF or Lucee, or the [native Lucee images](https://hub.docker.com/r/lucee/lucee). 
 
-These examples will provide a starting point for how to integrate different services and manage their deployment with Docker Compose. (Starting with Compose is a great first step to ultimate orchestration of containers--whether via Kubernetes, Swarm, or otherwise. So regard this as such: a starting point for your further exploration and learning, however you may deploy containers.)
+This effort is based on the concept found in the more general-purpose https://github.com/docker/awesome-compose project, but has been created separately to focus on aspects of CFML-oriented containers and typical integration examples.
+
+These  will provide a starting point for how one could integrate different services and manage their deployment with Docker Compose. Starting with Compose is a great first step to ultimate orchestration of containers--whether via Kubernetes, Swarm, or otherwise. 
+
+And recent versions of Docker now support deployment of compose files via [docker context](https://docs.docker.com/engine/context/working-with-contexts/) whether [into AWS ECS](https://docs.docker.com/engine/context/ecs-integration/) or [into Azure ACI](https://docs.docker.com/engine/context/aci-integration/)).
+
+So regard this as a starting point for your further exploration, learning, and deployment, however you may run your containers.
 
 
 ## Contents
