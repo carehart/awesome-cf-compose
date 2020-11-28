@@ -21,8 +21,9 @@ So regard this as a starting point for your further exploration, learning, and d
 - [Contribute](#Contribute)
 
 ## Example Docker Compose files for ColdFusion configuration variations
-- [ColdFusion (showing base CF image/latest image)](/cf-standalone)
-- ColdFusion 2018 (showing how to specify CF version)
+- [ColdFusion (showing base CF image/latest image)](/cf-latest)
+- ColdFusion 2021 (showing how to specify CF version to be "latest")
+- ColdFusion 2018
 - ColdFusion 2016
 - ColdFusion 2018 Update 1 (showing how to specify CF update level)
 - ColdFusion with setup script enabled
