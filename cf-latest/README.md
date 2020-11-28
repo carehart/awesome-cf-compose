@@ -10,7 +10,7 @@ Project structure:
 
 ```
 
-[_docker-compose.yaml_](docker-compose.yaml)
+[_docker-compose.yml_](docker-compose.yml)
 ```
 services:
     coldfusion: 
@@ -65,10 +65,18 @@ d935f819f622        eaps-docker-coldfusion.bintray.io/cf/coldfusion:latest   "sh
 
 ```
 
-After the application starts, navigate to `http://localhost:8500` in your web browser or run:
+After the application starts, navigate to `http://localhost:8500` in your web browser to see available files in CF's default webroot (added to by the /app volume mapping)
+
+Or run `http://localhost:8500/test.cfm` in your web browser to see the test page in the mapped /app folder, or run via curl:
 ```
 $ curl http://localhost:8500/test.cfm
+
+Which will show:
 Hello World!
+```
+Run this to see dump of server scope within container: navigate to `http://localhost:8500/dumpserver.cfm` in your web browser or run:
+```
+$ curl http://localhost:8500/dumpserver.cfm
 ```
 
 Stop and remove the containers
