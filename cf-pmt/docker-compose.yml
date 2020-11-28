@@ -3,11 +3,11 @@ services:
      
     coldfusion:
         container_name: coldfusion
-        image: eaps-docker-coldfusion.bintray.io/cf/coldfusion 
+        image: eaps-docker-coldfusion.bintray.io/cf/coldfusion:latest-2018 
         ports:
         - "8500:8500"
         volumes:
-        - "./webroot:/app"
+            - ./app:/app
         env_file:
         - coldfusion.env
         healthcheck:
