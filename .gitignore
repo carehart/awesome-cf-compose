@@ -1,3 +1,9 @@
 cf-pmt/webroot/WEB-INF/cfclasses/
+cf-pmt/app/WEB-INF/cfclasses/
+
 cf-pmt/webroot/crossdomain.xml
+cf-pmt/app/crossdomain.xml
+
 cf-pmt/webroot/WEB-INF/cfform/
+cf-pmt/app/WEB-INF/cfform/logs/
+*.log

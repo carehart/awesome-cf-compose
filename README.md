@@ -37,7 +37,7 @@ So regard this as a starting point for your further exploration, learning, and d
 - ColdFusion with Redis sessions enabled
 
 ### Examples of related feature enablements
-- ColdFusion with PMT enabled
+- [ColdFusion with PMT enabled(/cf-pmt)]
 - ColdFusion with API Manager enabled
 
 ## Examples of Docker feature enablement
