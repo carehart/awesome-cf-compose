@@ -29,6 +29,9 @@ services:
 
 ```
 $ docker-compose up -d
+- Network cf-latest_default         Created                                                                       0.8s
+ - Container cf-latest-coldfusion-1  Created                                                                       0.2s
+Attaching to cf-latest-coldfusion-1
 cf-2021-coldfusion-1  | Updating webroot to /app
 cf-2021-coldfusion-1  | Configuring virtual directories
 cf-2021-coldfusion-1  | Updating password
@@ -36,9 +39,6 @@ cf-2021-coldfusion-1  | Serial Key: Not Provided
 cf-2021-coldfusion-1  | Previous Serial Key: Not Provided
 cf-2021-coldfusion-1  | Starting ColdFusion
 ...
-cf-2021-coldfusion-1  | Oct 3, 2021 01:31:10 AM Information [main] - ColdFusion started
-cf-2021-coldfusion-1  | Oct 3, 2021 01:31:10 AM Information [main] - ColdFusion: application services are now available        
-cf-2021-coldfusion-1  | Oct 3, 2021 01:31:11 AM Information [http-nio-8500-exec-1] - Initialize client.properties file
 ```
 
 ## Expected result
@@ -46,8 +46,8 @@ cf-2021-coldfusion-1  | Oct 3, 2021 01:31:11 AM Information [http-nio-8500-exec-
 Listing containers must show one container running and the port mapping as below:
 ```
 $ docker ps
-CONTAINER ID        IMAGE                                                    COMMAND                  CONTAINER ID   IMAGE                                     COMMAND                  CREATED          STATUS                    PORTS                                         NAMES
-a7df2d9ffc26   adobecoldfusion/coldfusion2021:2021.0.2   "sh /opt/startup/sta…"   56 minutes ago   Up 54 minutes (healthy)   8118/tcp, 45564/tcp, 0.0.0.0:8500->8500/tcp   cf-2021-coldfusion-1
+CONTAINER ID   IMAGE                                     COMMAND                  CREATED          STATUS                    PORTS                                         NAMES
+a7df2d9ffc26   adobecoldfusion/coldfusion2021:2021.0.2   "sh /opt/startup/sta…"   6 minutes ago   Up 6 minutes (healthy)   8118/tcp, 45564/tcp, 0.0.0.0:8500->8500/tcp   cf-2021-coldfusion-1
 ```
 
 After the application starts, navigate to `http://localhost:8500` in your web browser to see available files in CF's default webroot (added to by the /app volume mapping)
