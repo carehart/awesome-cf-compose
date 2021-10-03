@@ -1,7 +1,7 @@
 version: "3" 
 services:
     coldfusion: 
-        image: eaps-docker-coldfusion.bintray.io/cf/coldfusion:latest
+        image: adobecoldfusion/coldfusion2021:latest
         ports:
         - "8500:8500"
         environment:

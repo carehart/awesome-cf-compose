@@ -7,6 +7,7 @@ Project structure:
 ├── docker-compose.yml
 ├── app
     └── test.cfm
+    └── dumpserver.cfm
 
 ```
 
@@ -14,7 +15,7 @@ Project structure:
 ```
 services:
     coldfusion: 
-        image: eaps-docker-coldfusion.bintray.io/cf/coldfusion:latest
+        image: adobecoldfusion/coldfusion2021:latest
         ports:
         - "8500:8500"
         environment:
@@ -28,31 +29,17 @@ services:
 
 ```
 $ docker-compose up -d
-Creating network "cf-2021_default" with the default driver
-Creating cf-2021_coldfusion_1 ... done
-Attaching to cf-2021_coldfusion_1
-coldfusion_1  | Updating webroot to /app
-coldfusion_1  | Configuring virtual directories
-coldfusion_1  | Updating password
-coldfusion_1  | Skipping language updation
-coldfusion_1  | Serial Key: Not Provided
-coldfusion_1  | Previous Serial Key: Not Provided
-coldfusion_1  | Starting ColdFusion
-coldfusion_1  | Starting ColdFusion 2021 server ...
-coldfusion_1  | ======================================================================
-coldfusion_1  | ColdFusion 2021 server has been started.
-coldfusion_1  | ColdFusion 2021 will write logs to /opt/ColdFusion/cfusion/bin/../logs/coldfusion-out.log
-coldfusion_1  | ======================================================================
-coldfusion_1  | [000] Checking server startup status...
-coldfusion_1  | No Modules to be installed !
-coldfusion_1  | No Settings to be imported !
-coldfusion_1  | No Modules to be imported !
-coldfusion_1  |   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-coldfusion_1  |                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-coldfusion_1  | External Addons: Disabled
-coldfusion_1  | External Session Storage: Disabled
-coldfusion_1  | Skipping setup script invocation
+- Network cf-latest_default         Created                                                                       0.8s
+ - Container cf-latest-coldfusion-1  Created                                                                       0.2s
+Attaching to cf-latest-coldfusion-1
+cf-latest-coldfusion-1  | Updating webroot to /app
+cf-latest-coldfusion-1  | Configuring virtual directories
+cf-latest-coldfusion-1  | Updating password
+cf-latest-coldfusion-1  | Skipping language updation
+cf-latest-coldfusion-1  | Serial Key: Not Provided
+cf-latest-coldfusion-1  | Previous Serial Key: Not Provided
+cf-latest-coldfusion-1  | Starting ColdFusion
+...
 ```
 
 ## Expected result
@@ -61,7 +48,7 @@ Listing containers must show one container running and the port mapping as below
 ```
 $ docker ps
 CONTAINER ID        IMAGE                                                    COMMAND                  CREATED              STATUS                        PORTS                                         NAMES
-d935f819f622        eaps-docker-coldfusion.bintray.io/cf/coldfusion:latest   "sh /opt/startup/sta…"   About a minute ago   Up About a minute (healthy)   8118/tcp, 45564/tcp, 0.0.0.0:8500->8500/tcp   cf-latest_coldfusion_1
+d935f819f622        adobecoldfusion/coldfusion2021:latest   "sh /opt/startup/sta…"   About a minute ago   Up About a minute (healthy)   8118/tcp, 45564/tcp, 0.0.0.0:8500->8500/tcp   cf-latest_coldfusion_1
 
 ```
 
@@ -72,7 +59,7 @@ Or run `http://localhost:8500/test.cfm` in your web browser to see the test page
 $ curl http://localhost:8500/test.cfm
 
 Which will show:
-Hello World!
+Hello World! at 03-Oct-2021 02:35:44
 ```
 Run this to see dump of server scope within container: navigate to `http://localhost:8500/dumpserver.cfm` in your web browser or run:
 ```

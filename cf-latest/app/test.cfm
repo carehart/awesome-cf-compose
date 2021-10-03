@@ -1,8 +1,4 @@
 <cfscript>
 name="World"
-writeoutput("Hello #name#!");
+writeoutput("Hello #name#! at #datetimeformat(now())#");
 </cfscript>
-<!---
-<cfset name="World">
-<cfoutput>Hello #name#!</cfoutput>
---->
