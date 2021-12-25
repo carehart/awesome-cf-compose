@@ -1,41 +1,37 @@
 version: "3" 
 services:
-     
-    coldfusion:
-        container_name: coldfusion
-        image: eaps-docker-coldfusion.bintray.io/cf/coldfusion:2018.0.10
-        ports:
-        - "8500:8500"
-        volumes:
-        - ./app:/app
-        env_file:
-        - coldfusion.env
-        healthcheck:
-           test: curl -f http://localhost:8500/ 
-           interval: 1m
-           timeout: 3s
-        networks:
-        - webnet
- 
-    pmt: 
-       # default username and password are admin/admin 
-       container_name: pmt
-       image: eaps-docker-coldfusion.bintray.io/cf/pmt:2018.0.2
-       depends_on:
-       - coldfusion
-       ports:
-       - "9101:9101"
-       - "9200:9200"
-       env_file:
-       - pmt.env
-       volumes:
-       - ./datastorelogs/:/opt/coldfusionperformancemonitoringtoolset/datastore/logs/
-       healthcheck:
-          test: curl -f http://localhost:9101/  
-          interval: 1m
-          timeout: 3s
-       networks: 
-       - webnet
- 
-networks:
-    webnet:
+   coldfusion:
+      container_name: coldfusion
+      image: adobecoldfusion/coldfusion2021:latest
+      ports:
+      - 8500:8500
+      volumes:
+      - ./app:/app
+      env_file:
+      - coldfusion.env
+      healthcheck:
+         test: curl -f http://localhost:8500/ 
+         interval: 1m
+         timeout: 3s
+   pmt:
+      # beware of need for host to have vm.max_map_count >= 262144
+      # otherwise, will see error with "docker compose log pmt", as in:
+      # max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+      # to solve this in docker desktop on Windows, use wsl -d docker-desktop sysctl -w vm.max_map_count=262144
+      container_name: pmt
+      image: adobecoldfusion/pmt2021:2021.0.2
+      depends_on:
+      - coldfusion
+      ports:
+      - 9101:9101
+      - 9200:9200
+      # command: bash -c "env node.store.allow_mmap=false"
+      # default username and password are admin/admin 
+      env_file:
+      - pmt.env
+      #volumes:
+      #- ./datastorelogs/:/opt/coldfusionperformancemonitoringtoolset/datastore/logs/
+      healthcheck:
+         test: curl -f http://localhost:9101/  
+         interval: 1m
+         timeout: 3s
