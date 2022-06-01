@@ -1,1 +1,1 @@
-<cfdump var="#server#">
+<cfdump var="#server.coldfusion#">
