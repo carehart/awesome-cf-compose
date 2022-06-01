@@ -63,7 +63,7 @@ $ curl http://localhost:8500/test.cfm
 Which will show:
 Hello World! at 03-Oct-2021 02:35:44
 ```
-Run this to see dump of server scope within container: navigate to `http://localhost:8500/dumpserver.cfm` in your web browser or run:
+Run this to see a dump of the server.coldfusion struct within the container: navigate to `http://localhost:8500/dumpserver.cfm` in your web browser or run:
 ```
 $ curl http://localhost:8500/dumpserver.cfm
 ```
