@@ -32,12 +32,12 @@ $ docker-compose up -d
 - Network cf-latest_default         Created                                                                       0.8s
  - Container cf-latest-coldfusion-1  Created                                                                       0.2s
 Attaching to cf-latest-coldfusion-1
-cf-2021-coldfusion-1  | Updating webroot to /app
-cf-2021-coldfusion-1  | Configuring virtual directories
-cf-2021-coldfusion-1  | Updating password
-cf-2021-coldfusion-1  | Serial Key: Not Provided       
-cf-2021-coldfusion-1  | Previous Serial Key: Not Provided
-cf-2021-coldfusion-1  | Starting ColdFusion
+cf-2021-latest-coldfusion-1  | Updating webroot to /app
+cf-2021-latest-coldfusion-1  | Configuring virtual directories
+cf-2021-latest-coldfusion-1  | Updating password
+cf-2021-latest-coldfusion-1  | Serial Key: Not Provided       
+cf-2021-latest-coldfusion-1  | Previous Serial Key: Not Provided
+cf-2021-latest-coldfusion-1  | Starting ColdFusion
 ...
 ```
 

@@ -46,7 +46,7 @@ cf-latest-coldfusion-1  | Starting ColdFusion
 
 ## Expected result
 
-Listing containers must show one container running and the port mapping as below:
+Listing containers must show one container running and the port mapping as below (note that the version reported may differ for you, in using the "latest" tag):
 ```
 $ docker ps
 CONTAINER ID        IMAGE                                                    COMMAND                  CREATED              STATUS                        PORTS                                         NAMES
