@@ -1,6 +1,8 @@
 ## Compose sample application
 ### ColdFusion standalone application
 
+This is just the most basic demonstration, and while using the "latest" tag is an option, it's not the best. See other examples that show pointing to a specific tag (for a specific update of a specific CF version).
+
 Project structure:
 ```
 .
