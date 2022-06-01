@@ -21,6 +21,7 @@ So regard this as a starting point for your further exploration, learning, and d
 - [Contribute](#Contribute)
 
 ## Example Docker Compose files for ColdFusion configuration variations
+- [Considerations regarding use of CF containers](#Considerations-regarding-use-of-CF-containers)
 - [ColdFusion latest](/cf-latest) (showing base CF image, as "latest" image, whatever version that may be)
 - [ColdFusion 2021 latest](/cf-2021) (showing how to specify "latest" CF2021 image, whateer update level that may be)
 - ColdFusion 2018
@@ -69,7 +70,7 @@ So regard this as a starting point for your further exploration, learning, and d
 ### Examples of multiple integrated services
 - ColdFusion with ? (a couple of examples)
 
-Not intending to all possible permutations of the above service integration examples. See [Considerations regarding configuration](Considerations-regarding-configuration), for more.
+Not intending to all possible permutations of the above service integration examples. See [Considerations regarding configuration](#Considerations-regarding-configuration), for more.
 
 ## Getting started
 
@@ -106,6 +107,14 @@ docker-compose down
 
 Whether using or contributing to the repository, note  the following considerations.
 
+### Considerations regarding use of CF containers
+
+As a heads-up especially for those using the Adobe CF Docker images (though the concepts apply also in degrees to the Ortus CF/Lucee and native Lucee images), please note that the Adobe CF Docker images do offer many configuration options which are not being demonstrated in most of these simple examples. For more information on those options, see the [docs on using the Adobe Docker images](https://helpx.adobe.com/coldfusion/using/docker-images-coldfusion.html).
+
+Note also that when running any of these Adobe CF examples, they default to using port 8500. If you may be running CF (or any app) that is already using port 8500, you will get an error, such as `Ports are not available: exposing port TCP 0.0.0.0:8500 -> 0.0.0.0:0`. You can modify the example docker-compose.yml offered here, changing the line referring to `"8500:8500"` so that the first number is whatever port you want to have the container use. So using `"8501:8500"` would cause it to be accessible instead at port 8501.
+
+The previous comment applies similarly to the Ortus CF/Lucee and native Lucee images, which will default to using other ports, and again if you may be running something already on that port, then make the same sort of change in their respective docker-compose.yml file. 
+
 ### Limiting the combinations of examples
 It would be tempting to create compose files that combine many things at once (integration of CF with Apache and mysql, or CF/Apache/mysql and the PMT, or CF/Apache/mysql and FR, or swapping out mysql for SQL Server, or IIS for Apache, and so on).
 
@@ -113,7 +122,7 @@ Because the number of such combinations could grow exponentially (and become clu
 
 Time will tell how to best organize when contributors may offer examples combining several integrations in one compose file.
 
-### Some examples will presume dependencies and so not be self-contained
+### Some examples will presume dependencies and so will not be self-contained
 While many integrations will be shown using resources ALSO found in the compose file (making it self-contained), as is the normal expectation for compose files, some examples will be setup presuming instead to integrate with some resource existing OUTSIDE of the compose file, such as a mysql server defined on or in the network of the host.
 
 Such examples are necesary to meet real-world requirements as folks explore CF Docker images and integrations. Obviously, such examples will have dependencies which, if not existing, will cause the compose file to fail.
