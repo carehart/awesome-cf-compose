@@ -15,7 +15,7 @@ Project structure:
 ```
 services:
     coldfusion: 
-        image: adobecoldfusion/coldfusion2021:2021.0.2
+        image: adobecoldfusion/coldfusion2021:2021.0.4
         ports:
         - "8500:8500"
         environment:
