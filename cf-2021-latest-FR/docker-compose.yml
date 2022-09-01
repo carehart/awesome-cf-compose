@@ -1,0 +1,12 @@
+services:
+    coldfusion:
+        build: . 
+        ports:
+        - "8500:8500"
+        - "8088:8088"
+        environment:
+            - acceptEULA=YES
+            - password=123
+            - _JAVA_OPTIONS=-javaagent:"/opt/fusionreactor/fusionreactor.jar=name=lucee-fr,address=8088"
+        volumes:
+            - ./app:/app

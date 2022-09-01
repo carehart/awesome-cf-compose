@@ -1,3 +1,4 @@
 crossdomain.xml
 WEB-INF/
 *.log
+.vscode/
