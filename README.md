@@ -25,7 +25,7 @@ So regard this as a starting point for your further exploration, learning, and d
 - [ColdFusion latest](/cf-latest) (showing base CF image, as "latest" image, whatever version that may be)
 - [ColdFusion 2021 latest](/cf-2021-latest) (showing how to specify "latest" CF2021 image, whatever update level that may be)
 - [ColdFusion 2021 specific update](/cf-2021-update-specified) (showing how to specify a specific update level for the CF2021 image)
-- ColdFusion 2018
+- [ColdFusion 2018 latest](/cf-2018-latest) (showing how to specify "latest" CF2018 image, whatever update level that may be)
 - ColdFusion 2018 Update 1 (showing how to specify CF update level)
 - ColdFusion 2016
 - [ColdFusion 2021 with Admin settings set via json](/cf-2021-importcfsettings)
