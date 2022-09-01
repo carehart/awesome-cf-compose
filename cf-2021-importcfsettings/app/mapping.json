@@ -1,0 +1,1 @@
+{"MAPPING":{"/CFIDE":{"virtual":"/CFIDE","physical":"/opt/coldfusion/cfusion/wwwroot/CFIDE"},"/gateway":{"virtual":"/gateway","physical":"/opt/coldfusion/cfusion/gateway/cfc"},"/testmapping":{"virtual":"/testmapping","physical":"/tmp2"}}}

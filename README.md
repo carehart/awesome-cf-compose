@@ -25,9 +25,10 @@ So regard this as a starting point for your further exploration, learning, and d
 - [ColdFusion latest](/cf-latest) (showing base CF image, as "latest" image, whatever version that may be)
 - [ColdFusion 2021 latest](/cf-2021-latest) (showing how to specify "latest" CF2021 image, whatever update level that may be)
 - [ColdFusion 2021 specific update](/cf-2021-update-specified) (showing how to specify a specific update level for the CF2021 image)
-- ColdFusion 2018
+- [ColdFusion 2018 latest](/cf-2018-latest) (showing how to specify "latest" CF2018 image, whatever update level that may be)
 - ColdFusion 2018 Update 1 (showing how to specify CF update level)
-- ColdFusion 2016
+- [ColdFusion 2021 with Admin settings set via json](/cf-2021-importcfsettings)
+- [ColdFusion 2021 with modules imported](/cf-2021-installmodules)
 - ColdFusion with setup script enabled
 - ColdFusion with admin config via CAR file
 - ColdFusion with secure profile enabled
@@ -38,14 +39,23 @@ So regard this as a starting point for your further exploration, learning, and d
 - ColdFusion with PDFg (CFHTML2PDF) feature enabled
 - ColdFusion with Redis sessions enabled
 
-### Examples of related feature enablements
-- [ColdFusion with PMT enabled](/cf-pmt)
+### Examples of related CF feature enablements
+- [ColdFusion 2021 with PMT 2021 enabled](/cf-2021-pmt)
+- [ColdFusion 2018 with PMT 2018 enabled](/cf-2018-pmt)
 - ColdFusion with API Manager enabled
+
+## Examples of Lucee
+- [Lucee latest](/lucee-latest) (showing base lucee image, as "latest" image, whatever version that may be)
+- [Lucee with FusionReactor enabled](/lucee-latest-fr)
 
 ## Examples of Docker feature enablement
 - ColdFusion with CF webroot copied into image
 - ColdFusion with CF webroot as host bind mount
 - ColdFusion with CF webroot as Docker volume
+
+### Examples of FusionReactor integration
+- [ColdFusion 2021 with FusionReactor enabled](/cf-2021-latest-fr)
+- [Lucee with FusionReactor enabled](/lucee-latest-fr)
 
 ## Examples of integrated services
 
