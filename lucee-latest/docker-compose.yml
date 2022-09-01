@@ -1,0 +1,13 @@
+services:
+    lucee: 
+        image: lucee/lucee:latest
+        #environment:
+        #- LUCEE_JAVA_OPTS=-Xmx600m 
+        volumes:
+            - ./app:/var/www
+        #    - type: bind
+        #      source: ./lucee-admin-password/password.txt
+        #      target: /opt/lucee/server/lucee-server/context/password.txt
+        ports:
+        - "8888:8888"
+        # see readme for optional elements to set java options, copy in code, and/or set Lucee admin password
