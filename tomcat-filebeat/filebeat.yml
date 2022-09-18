@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+ labels:
+   app: tomcat
+   component: filebeat
+ name: filebeat-sidecar-config
+
+data:
+  filebeat.yml: |
+    filebeat:
+      config:
+        modules:
+          path: /usr/share/filebeat/modules.d/*.yml
+          reload:
+            enabled: true
+      modules:
+      - module: apache
+        access:
+          enabled: true
+          var.paths:
+          - "/usr/local/tomcat/logs/localhost_access_log.*.txt"
+        error:
+          enabled: true
+          var.paths:
+          - "/usr/local/tomcat/logs/application.log*"
+          - "/usr/local/tomcat/logs/catalina.*.log"
+          - "/usr/local/tomcat/logs/host-manager.*.log"
+          - "/usr/local/tomcat/logs/localhost.*.log"
+          - "/usr/local/tomcat/logs/manager.*.log"
+    output:
+      console:
+        pretty: false
+#      output:
+#        elasticsearch:
+#          host: '${NODE_NAME}'
+#          hosts: '${ELASTICSEARCH_HOSTS:elasticsearch-master.elastic-system:9200}'

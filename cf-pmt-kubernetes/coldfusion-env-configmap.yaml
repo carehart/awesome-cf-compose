@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    service: coldfusion-coldfusion-env
+  name: coldfusion-env
+data:
+  acceptEULA: "YES"
+  installModules: pmtagent
+  password: ColdFusion123

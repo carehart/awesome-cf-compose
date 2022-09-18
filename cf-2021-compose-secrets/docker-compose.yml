@@ -1,0 +1,18 @@
+version: "3.1"
+services:
+    coldfusion:
+        image: adobecoldfusion/coldfusion2021:2021.0.2
+        ports:
+        - "8500:8500"
+        environment:
+            - acceptEULA=YES
+            - password=123
+        volumes:
+            - ./app:/app
+        secrets:
+            - my_file_secret
+            #- source: my_file_secret
+            #  target: /config/secrets.txt
+secrets:  # top level secrets block
+  my_file_secret:
+    file: ./my_file_secret.txt
