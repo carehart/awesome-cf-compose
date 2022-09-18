@@ -56,7 +56,7 @@ So regard this as a starting point for your further exploration, learning, and d
 - ColdFusion with CF webroot as Docker volume
 
 ### Examples of FusionReactor integration
-- [ColdFusion 2021 with FusionReactor enabled](/cf-2021-latest-fr)
+- [ColdFusion 2021 with FusionReactor enabled](/cf-2021-with-FR)
 - [Lucee with FusionReactor enabled](/lucee-latest-fr)
 
 ## Examples of integrated services
