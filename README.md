@@ -35,8 +35,7 @@ So regard this as a starting point for your further exploration, learning, and d
 - ColdFusion with mysql jar embedded
 
 ### Examples of CF feature enablement
-- ColdFusion with Solr feature enabled
-- ColdFusion with PDFg (CFHTML2PDF) feature enabled
+- [ColdFusion with Solr and and PDFg (CFHTML2PDF) features enabled](/cf-2021-with-addons)
 - ColdFusion with Redis sessions enabled
 
 ### Examples of related CF feature enablements
