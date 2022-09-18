@@ -45,7 +45,7 @@ So regard this as a starting point for your further exploration, learning, and d
 
 ## Examples of Lucee
 - [Lucee latest](/lucee-latest) (showing base lucee image, as "latest" image, whatever version that may be)
-- [Lucee with FusionReactor enabled](/lucee-latest-fr)
+- [Lucee with FusionReactor enabled](/lucee-with-fr)
 
 ## Examples of Commabdbox images for ACF and Lucee
 - [Commandbox image with latest Lucee5 ](/cmdbox-lucee-latest) (showing base luce5e image, as "latest" image, whatever version that may be)
@@ -57,7 +57,7 @@ So regard this as a starting point for your further exploration, learning, and d
 
 ### Examples of FusionReactor integration
 - [ColdFusion 2021 with FusionReactor enabled](/cf-2021-with-FR)
-- [Lucee with FusionReactor enabled](/lucee-latest-fr)
+- [Lucee with FusionReactor enabled](/lucee-with-fr)
 
 ## Examples of integrated services
 
