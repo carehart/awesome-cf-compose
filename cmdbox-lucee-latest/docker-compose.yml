@@ -1,0 +1,7 @@
+services:
+    lucee: 
+        image: ortussolutions/commandbox:lucee5
+        volumes:
+            - ./app:/app
+        ports:
+        - "8888:8080"

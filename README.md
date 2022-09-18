@@ -47,6 +47,9 @@ So regard this as a starting point for your further exploration, learning, and d
 - [Lucee latest](/lucee-latest) (showing base lucee image, as "latest" image, whatever version that may be)
 - [Lucee with FusionReactor enabled](/lucee-latest-fr)
 
+## Examples of Commabdbox images for ACF and Lucee
+- [Commandbox image with latest Lucee5 ](/cmdbox-lucee-latest) (showing base luce5e image, as "latest" image, whatever version that may be)
+
 ## Examples of Docker feature enablement
 - ColdFusion with CF webroot copied into image
 - ColdFusion with CF webroot as host bind mount
