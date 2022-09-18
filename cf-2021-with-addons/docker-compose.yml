@@ -1,0 +1,27 @@
+version: "3" 
+services:
+    addons:
+        image: adobecoldfusion/coldfusionaddons2021
+        environment:
+            - acceptEULA=YES
+        ports: 
+            - "8993:8993"
+
+    coldfusion:
+        image: adobecoldfusion/coldfusion2021
+        ports:
+            - "8500:8500"
+        environment:
+            - acceptEULA=YES
+            - password=123
+            # following needed for either solr or pdfg
+            - configureExternalAddons=true
+            - addonsHost=addons
+            - addonsPort=8993
+            - installModules=htmltopdf,search
+            # following needed for pdfg
+            - addonsPDFServiceName=addons
+        depends_on:
+            - addons
+        volumes:
+            - ./app:/app
