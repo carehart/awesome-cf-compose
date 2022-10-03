@@ -7,6 +7,6 @@ services:
         environment:
             - acceptEULA=YES
             - password=123
-            - _JAVA_OPTIONS=-javaagent:"/opt/fusionreactor/fusionreactor.jar=name=lucee-fr,address=8088"
+            - _JAVA_OPTIONS=-javaagent:"/opt/fusionreactor/fusionreactor.jar=name=cf-fr,address=8088"
         volumes:
             - ./app:/app
