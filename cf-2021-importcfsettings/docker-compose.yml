@@ -7,5 +7,7 @@ services:
             - acceptEULA=YES
             - password=123
             - importCFSettings=mapping.json
+            # if cfsetup export was created with a passphrase, you can provide it below
+            #- importCFSettingsPassphrase=<yourpassphrase>
         volumes:
             - ./app:/app
