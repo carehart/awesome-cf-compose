@@ -30,7 +30,7 @@ So regard this as a starting point for your further exploration, learning, and d
 - [ColdFusion 2021 with modules imported](/cf-2021-installmodules)
 - [ColdFusion with admin config via cfsetup json file](/cf-2021-importcfsettings)
 - [ColdFusion with admin config via CAR file](/cf-2021-car-setup)
-- ColdFusion with setup script enabled
+- [ColdFusion with setup script enabled](/cf-2021-setupscript)
 - ColdFusion with secure profile enabled
 - ColdFusion with mysql jar embedded
 
