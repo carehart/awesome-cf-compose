@@ -19,6 +19,7 @@ services:
             - addonsHost=addons
             - addonsPort=8993
             - installModules=htmltopdf,search
+            # importModules can be used instead to point to a file in container holding cfpm export
             # following needed for pdfg
             - addonsPDFServiceName=addons
         depends_on:
