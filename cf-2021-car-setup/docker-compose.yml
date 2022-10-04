@@ -1,0 +1,13 @@
+version: "3" 
+services:
+    coldfusion:
+        image: adobecoldfusion/coldfusion2021:latest
+        ports:
+        - "8500:8500"
+        environment:
+            - acceptEULA=YES
+            - password=123
+        volumes:
+            - ./app:/app
+            # note that it's necessry to add this mapping (or for you to copy the data folder in a Dockerfile)
+            - ./data:/data
