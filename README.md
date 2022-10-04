@@ -27,10 +27,10 @@ So regard this as a starting point for your further exploration, learning, and d
 - [ColdFusion 2021 specific update](/cf-2021-update-specified) (showing how to specify a specific update level for the CF2021 image)
 - [ColdFusion 2018 latest](/cf-2018-latest) (showing how to specify "latest" CF2018 image, whatever update level that may be)
 - ColdFusion 2018 Update 1 (showing how to specify CF update level)
-- [ColdFusion 2021 with Admin settings set via json](/cf-2021-importcfsettings)
 - [ColdFusion 2021 with modules imported](/cf-2021-installmodules)
+- [ColdFusion with admin config via cfsetup json file](/cf-2021-importcfsettings)
+- [ColdFusion with admin config via CAR file](/cf-2021-car-setup)
 - ColdFusion with setup script enabled
-- ColdFusion with admin config via CAR file
 - ColdFusion with secure profile enabled
 - ColdFusion with mysql jar embedded
 
