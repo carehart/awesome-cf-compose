@@ -41,7 +41,7 @@ So regard this as a starting point for your further exploration, learning, and d
 ### Examples of related CF feature enablements
 - [ColdFusion 2021 with PMT 2021 enabled](/cf-2021-pmt)
 - [ColdFusion 2018 with PMT 2018 enabled](/cf-2018-pmt)
-- ColdFusion with API Manager enabled
+- [ColdFusion with API Manager enabled](/cf-2021-api-manager)
 
 ## Examples of Lucee
 - [Lucee latest](/lucee-latest) (showing base lucee image, as "latest" image, whatever version that may be)
