@@ -1,0 +1,22 @@
+services:
+    apimanager: 
+        container_name: apimanager
+        image: adobecoldfusion/apimanager2021
+        depends_on:
+        - datastore
+        - analytics
+        ports:
+        - "9001:9000"
+        # access admin as http://localhost:9001/admin/, portal at http://localhost:9001/portal/
+        env_file:
+        - apimanager.env 
+    datastore:
+        container_name: datastore
+        image: adobecoldfusion/apimanageraddons2021
+        env_file:
+        - datastore.env
+    analytics:
+        container_name: analytics
+        image: adobecoldfusion/apimanageraddons2021
+        env_file:
+        - analytics.env
