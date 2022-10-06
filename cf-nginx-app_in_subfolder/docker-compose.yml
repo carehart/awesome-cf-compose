@@ -1,0 +1,20 @@
+version: "3" 
+services:
+    coldfusion: 
+        image: adobecoldfusion/coldfusion2021:latest
+        ports:
+            - "8500:8500"
+        environment:
+            - acceptEULA=YES
+            - password=123
+        volumes:
+            - ./app:/app
+    nginx:
+        image: nginx:latest
+        volumes:
+          - ./nginx.conf:/etc/nginx/nginx.conf:ro
+        depends_on:
+          - coldfusion
+        ports:
+        - "4000:4000"
+        - "4001:4001"
