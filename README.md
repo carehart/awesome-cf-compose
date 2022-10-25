@@ -1,15 +1,14 @@
 # Awesome CF compose  [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated list of Docker Compose examples for use with CFML Docker images, whether the CF images from Adobe, available from [Adobe's Dockerhub CF repo](https://hub.docker.com/u/adobecoldfusion) or [Adobe's Amazon ECR CF repo](https://gallery.ecr.aws/adobe/); or the [Ortus CommandBox images](https://hub.docker.com/r/ortussolutions/commandbox/) for CF or Lucee; or the [native Lucee images](https://hub.docker.com/r/lucee/lucee).
+A curated list of Docker Compose examples for use with CFML Docker images, whether the CF images from Adobe, available from [Adobe's Dockerhub CF repo](https://hub.docker.com/u/adobecoldfusion) or [Adobe's Amazon ECR CF repo](https://gallery.ecr.aws/adobe/), or the [native Lucee images](https://hub.docker.com/r/lucee/lucee), or the [Ortus CommandBox images](https://hub.docker.com/r/ortussolutions/commandbox/) for CF or Lucee.
 
-This effort is based on the concept found in the more general-purpose https://github.com/docker/awesome-compose project, but has been created separately to focus on aspects of CFML-oriented containers and typical integration examples.
+This effort is based on the more general-purpose https://github.com/docker/awesome-compose project, but created separately to focus on aspects of CFML-oriented containers and integration examples that may be more typical of CFML application development.
 
-These  will provide a starting point for how one could integrate different services and manage their deployment with Docker Compose. Starting with Compose is a great first step to ultimate orchestration of containers--whether via Kubernetes, Swarm, or otherwise.
+These Compose files can provide a starting point for how you could integrate different services and manage their deployment with Docker Compose. Starting with Compose is a great first step to ultimate orchestration of containers--whether via Kubernetes, Swarm, or otherwise.
 
-(And recent versions of Docker now support deployment of compose files via [docker context](https://docs.docker.com/engine/context/working-with-contexts/) whether [into AWS ECS](https://docs.docker.com/engine/context/ecs-integration/) or [into Azure ACI](https://docs.docker.com/engine/context/aci-integration/).)
+(You can convert Docker Compose files to Kubernetes manifests using the free [kompose tool](https://kompose.io/). Also, recent versions of Docker now support deployment of compose files via [docker context](https://docs.docker.com/engine/context/working-with-contexts/) whether [into AWS ECS](https://docs.docker.com/engine/context/ecs-integration/) or [into Azure ACI](https://docs.docker.com/engine/context/aci-integration/).)
 
-So regard this as a starting point for your further exploration, learning, and deployment, however you may run your containers.
-
+So regard this project as a starting point for your further exploration, learning, and deployment, however it may be that you would run your containers.
 
 ## Contents
 - [Example Docker Compose files for ColdFusion configuration variations](#Example-Docker-Compose-files-for-ColdFusion-configuration-variations)
@@ -28,11 +27,14 @@ So regard this as a starting point for your further exploration, learning, and d
 - [ColdFusion 2018 latest](/cf-2018-latest) (showing how to specify "latest" CF2018 image, whatever update level that may be)
 - ColdFusion 2018 Update 1 (showing how to specify CF update level)
 - [ColdFusion 2021 with modules imported](/cf-2021-installmodules)
-- [ColdFusion with admin config via cfsetup json file](/cf-2021-importcfsettings)
+- [ColdFusion 2021 with admin config via cfsetup json file](/cf-2021-importcfsettings)
 - [ColdFusion with admin config via CAR file](/cf-2021-car-setup)
 - [ColdFusion with setup script enabled](/cf-2021-setupscript)
 - ColdFusion with secure profile enabled
 - ColdFusion with mysql jar embedded
+- [ColdFusion as a Dockerfile only](/cf-2021-latest-as-dockerfile) (For people who don't plan to or can't use Compose)
+- [ColdFusion with site root in a subfolder](/cf-app_in_subfolder) (For people who want to run the root of their site as a subfolder of /app)
+- [ColdFusion with specific Java version](/cf-2021-specific-java-version) 
 
 ### Examples of CF feature enablement
 - [ColdFusion with Solr and and PDFg (CFHTML2PDF) features enabled](/cf-2021-with-addons)
