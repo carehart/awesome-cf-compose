@@ -1,0 +1,57 @@
+version: "3"
+
+services:
+  coldfusion: 
+    image: adobecoldfusion/coldfusion2021:latest
+    ports:
+        - "8500:8500"
+    environment:
+        - acceptEULA=YES
+        - password=123
+    volumes:
+        - ./app:/app
+
+  nginx:
+    build: ./nginx
+    image: nginx:1.23-alpine
+    env_file:
+      - ./config.env
+    volumes:
+      - nginx_conf:/etc/nginx/sites
+      - letsencrypt_certs:/etc/letsencrypt
+      - certbot_acme_challenge:/var/www/certbot
+      - ./vhosts:/etc/nginx/vhosts
+      - ./html:/var/www/html
+    depends_on:
+      - coldfusion
+    ports:
+    - "80:80"
+    - "443:443"
+    - "4000:4000"
+    restart: unless-stopped
+
+  certbot:
+    build: ./certbot
+    image: certbot/certbot:v1.29.0
+    env_file:
+      - ./config.env
+    volumes:
+      - letsencrypt_certs:/etc/letsencrypt
+      - certbot_acme_challenge:/var/www/certbot
+
+  cron:
+    build: ./cron
+    image: evgeniy-khyst/cron
+    environment:
+      COMPOSE_PROJECT_NAME: "${COMPOSE_PROJECT_NAME}"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./:/workdir:ro
+    restart: unless-stopped
+
+volumes:
+  nginx_conf:
+    external: true
+  letsencrypt_certs:
+    external: true
+  certbot_acme_challenge:
