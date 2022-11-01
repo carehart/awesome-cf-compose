@@ -1,13 +1,23 @@
 version: "3"
 
 services:
-  coldfusion: 
+  coldfusion_a:
     image: adobecoldfusion/coldfusion2021:latest
     ports:
         - "8500:8500"
     environment:
         - acceptEULA=YES
-        - password=123
+        - password=CF123
+    volumes:
+        - ./app:/app
+
+  coldfusion_b:
+    image: adobecoldfusion/coldfusion2021:latest
+    ports:
+        - "8501:8500"
+    environment:
+        - acceptEULA=YES
+        - password=CF123
     volumes:
         - ./app:/app
 
@@ -20,10 +30,9 @@ services:
       - nginx_conf:/etc/nginx/sites
       - letsencrypt_certs:/etc/letsencrypt
       - certbot_acme_challenge:/var/www/certbot
-      - ./vhosts:/etc/nginx/vhosts
       - ./html:/var/www/html
     depends_on:
-      - coldfusion
+      - coldfusion_a
     ports:
     - "80:80"
     - "443:443"

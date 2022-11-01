@@ -124,11 +124,18 @@ docker volume create --name=nginx_conf
 docker volume create --name=letsencrypt_certs
 ```
 ### Step 4 - Build images and start containers using staging Let's Encrypt server
+Build and run as daemon
 ```
 docker compose up -d --build
+```
+Build with no cache and don't run
+```
+docker compose build --no-cache
+```
+Check logs after containers are up
+```
 docker compose logs -f
 ```
-
 ## Expected result
 
 Listing containers must show one container running and the port mapping as below (note that the version reported may differ for you, in using the "latest" tag):
