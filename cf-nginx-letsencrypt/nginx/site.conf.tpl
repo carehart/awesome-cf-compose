@@ -12,9 +12,11 @@ server {
 # added so docker dns is able to resolve service names
 resolver 127.0.0.11 ipv6=off;
 
+# The upstream is referenced in the server block. 
+# The upstream block could contain more than one server, which would
+# be used in a load balancing scenario
 upstream cfloadbalancer {
-    server coldfusion_a:8500;
-    server coldfusion_b:8501;
+    server coldfusion:8500;
 }
 
 server {

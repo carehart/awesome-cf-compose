@@ -1,29 +1,21 @@
 version: "3"
 
 services:
-  coldfusion_a:
-    image: adobecoldfusion/coldfusion2021:latest
-    ports:
-        - "8500:8500"
-    environment:
-        - acceptEULA=YES
-        - password=CF123
-    volumes:
-        - ./app:/app
 
-  coldfusion_b:
-    image: adobecoldfusion/coldfusion2021:latest
+  coldfusion:
+    build: ./coldfusion
+    image: joeywas/coldfusion2021:latest
     ports:
-        - "8501:8500"
-    environment:
-        - acceptEULA=YES
-        - password=CF123
+      - "8500:8500"
+    env_file:
+      - ./config.env
     volumes:
-        - ./app:/app
+      - ./app:/app
+    restart: unless-stopped
 
   nginx:
     build: ./nginx
-    image: nginx:1.23-alpine
+    image: joeywas/nginx:1.23-alpine
     env_file:
       - ./config.env
     volumes:
@@ -32,16 +24,15 @@ services:
       - certbot_acme_challenge:/var/www/certbot
       - ./html:/var/www/html
     depends_on:
-      - coldfusion_a
+      - coldfusion
     ports:
     - "80:80"
     - "443:443"
-    - "4000:4000"
     restart: unless-stopped
 
   certbot:
     build: ./certbot
-    image: certbot/certbot:v1.29.0
+    image: joeywas/certbot:v1.29.0
     env_file:
       - ./config.env
     volumes:
@@ -50,7 +41,7 @@ services:
 
   cron:
     build: ./cron
-    image: evgeniy-khyst/cron
+    image: joeywas/cron
     environment:
       COMPOSE_PROJECT_NAME: "${COMPOSE_PROJECT_NAME}"
     volumes:
