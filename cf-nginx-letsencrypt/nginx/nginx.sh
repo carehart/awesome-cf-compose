@@ -2,8 +2,8 @@
 
 set -e
 
-if [ -z "$DOMAINS" ]; then
-  echo "DOMAINS environment variable is not set"
+if [ -z "$DOMAIN" ]; then
+  echo "DOMAIN environment variable is not set"
   exit 1;
 fi
 
@@ -40,31 +40,28 @@ if [ ! -f /etc/nginx/sites/ssl/ssl-dhparams.pem ]; then
   openssl dhparam -out /etc/nginx/sites/ssl/ssl-dhparams.pem 2048
 fi
 
-domains_fixed=$(echo "$DOMAINS" | tr -d \")
-for domain in $domains_fixed; do
-  echo "Checking configuration for $domain"
+echo "Checking configuration for $DOMAIN"
 
-  if [ ! -f "/etc/nginx/sites/$domain.conf" ]; then
-    echo "Creating Nginx configuration file /etc/nginx/sites/$domain.conf"
-    sed "s/\${domain}/$domain/g" /customization/site.conf.tpl > "/etc/nginx/sites/$domain.conf"
-  fi
+if [ ! -f "/etc/nginx/sites/$DOMAIN.conf" ]; then
+  echo "Creating Nginx configuration file /etc/nginx/sites/$DOMAIN.conf"
+  sed "s/\${domain}/$DOMAIN/g" /customization/site.conf.tpl > "/etc/nginx/sites/$DOMAIN.conf"
+fi
 
-  if [ ! -f "/etc/nginx/sites/ssl/dummy/$domain/fullchain.pem" ]; then
-    echo "Generating dummy certificate for $domain"
-    mkdir -p "/etc/nginx/sites/ssl/dummy/$domain"
-    printf "[dn]\nCN=${domain}\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltName=DNS:$domain\nkeyUsage=digitalSignature\nextendedKeyUsage=serverAuth" > openssl.cnf
-    openssl req -x509 -out "/etc/nginx/sites/ssl/dummy/$domain/fullchain.pem" -keyout "/etc/nginx/sites/ssl/dummy/$domain/privkey.pem" \
-      -newkey rsa:2048 -nodes -sha256 \
-      -subj "/CN=${domain}" -extensions EXT -config openssl.cnf
-    rm -f openssl.cnf
-  fi
+if [ ! -f "/etc/nginx/sites/ssl/dummy/$DOMAIN/fullchain.pem" ]; then
+  echo "Generating dummy certificate for $DOMAIN"
+  mkdir -p "/etc/nginx/sites/ssl/dummy/$DOMAIN"
+  printf "[dn]\nCN=${DOMAIN}\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltName=DNS:$DOMAIN\nkeyUsage=digitalSignature\nextendedKeyUsage=serverAuth" > openssl.cnf
+  openssl req -x509 -out "/etc/nginx/sites/ssl/dummy/$DOMAIN/fullchain.pem" -keyout "/etc/nginx/sites/ssl/dummy/$DOMAIN/privkey.pem" \
+    -newkey rsa:2048 -nodes -sha256 \
+    -subj "/CN=${DOMAIN}" -extensions EXT -config openssl.cnf
+  rm -f openssl.cnf
+fi
 
-  if [ ! -d "/etc/letsencrypt/live/$domain" ]; then
-    use_dummy_certificate "$domain"
-    wait_for_lets_encrypt "$domain" &
-  else
-    use_lets_encrypt_certificate "$domain"
-  fi
-done
+if [ ! -d "/etc/letsencrypt/live/$DOMAIN" ]; then
+  use_dummy_certificate "$DOMAIN"
+  wait_for_lets_encrypt "$DOMAIN" &
+else
+  use_lets_encrypt_certificate "$DOMAIN"
+fi
 
 exec nginx -g "daemon off;"
