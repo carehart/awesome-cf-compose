@@ -1,0 +1,77 @@
+version: "3"
+
+services:
+  redis:
+    image: redis:6.2-alpine
+    restart: always
+    ports:
+      - '6379:6379'
+    command: redis-server --save 20 1 --loglevel warning --requirepass eYVX7EwVmmxKPCDmwMtyKVge8oLd2t81
+    volumes: 
+      - redis:/data
+
+  cfaddons:
+    image: adobecoldfusion/coldfusionaddons2021
+    env_file:
+      - ./config.env
+    ports: 
+      - "8993:8993"
+
+  coldfusion:
+    build: ./coldfusion
+    image: joeywas/coldfusion2021:latest
+    ports:
+      - "8500:8500"
+    env_file:
+      - ./config.env
+    volumes:
+      - ./app:/app
+    depends_on:
+      - cfaddons
+      - redis
+    restart: unless-stopped
+
+  nginx:
+    build: ./nginx
+    image: joeywas/nginx:1.23-alpine
+    env_file:
+      - ./config.env
+    volumes:
+      - nginx_conf:/etc/nginx/sites
+      - letsencrypt_certs:/etc/letsencrypt
+      - certbot_acme_challenge:/var/www/certbot
+      - ./html:/var/www/html
+    depends_on:
+      - coldfusion
+    ports:
+    - "80:80"
+    - "443:443"
+    restart: unless-stopped
+
+  certbot:
+    build: ./certbot
+    image: joeywas/certbot:v1.29.0
+    env_file:
+      - ./config.env
+    volumes:
+      - letsencrypt_certs:/etc/letsencrypt
+      - certbot_acme_challenge:/var/www/certbot
+
+  cron:
+    build: ./cron
+    image: joeywas/cron
+    environment:
+      COMPOSE_PROJECT_NAME: "${COMPOSE_PROJECT_NAME}"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./:/workdir:ro
+    restart: unless-stopped
+
+volumes:
+  redis:
+    driver: local
+  nginx_conf:
+    external: true
+  letsencrypt_certs:
+    external: true
+  certbot_acme_challenge:
