@@ -1,0 +1,10 @@
+services:
+    coldfusion:
+        build: . 
+        ports:
+            - "8500:8500"
+        environment:
+            - acceptEULA=YES
+            - password=123
+        volumes:
+            - ./app:/app
