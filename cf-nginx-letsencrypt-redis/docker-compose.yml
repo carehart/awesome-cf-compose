@@ -23,7 +23,7 @@ services:
     ports:
       - "8500:8500"
     env_file:
-      - ./config.env
+      - ./coldfusion.env
     volumes:
       - ./app:/app
     depends_on:

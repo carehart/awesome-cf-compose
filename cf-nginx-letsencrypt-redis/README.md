@@ -5,18 +5,21 @@ This is a demonstration of Nginx used as a proxy for a ColdFusion 2021 applicati
 ## Initial Setup
 
 ### Prerequisites
+
 1. Docker and Docker Compose are installed
 2. You have a domain name
 3. You have a server with a publicly routable IP address
 
 ### Step 1 - Edit config.env
+
 Edit `DOMAIN` and `CERTBOT_EMAIL` to reflect the domain and email address to use.
 To obtain a staging certificate from Lets Encrypt, set `CERTBOT_TEST_CERT=1`. Once comfortable the process works, change this to `0` to get a live (not staging) certificate.
 The `acceptEULA` is for Coldfusion and may be left as is.
 The `password` is the administrator account for Coldfusion.
 
 [_config.env_](config.env)
-```
+
+```text
 DOMAIN=yourhostname.fqdn.com
 CERTBOT_EMAIL=contact@gmail.com
 CERTBOT_TEST_CERT=1
@@ -32,17 +35,22 @@ addonsHost=cfaddons
 addonsPort=8993
 installModules=caching,redissessionstorage
 ```
+
 ### Step 2 - Create necessary Docker volumes
+
 ```bash
 docker volume create --name=nginx_conf
 docker volume create --name=letsencrypt_certs
 ```
+
 ### Step 3 - Build images and start containers
 
 Build and run as daemon
+
 ```bash
 docker compose up -d --build
 ```
+
 After a bit (minute or two), you should be able to get to the following URLs:
 
 1. Test Page [https://yourhostname.fqdn.com/test.cfm](https://yourhostname.fqdn.com/test.cfm)
@@ -51,13 +59,17 @@ After a bit (minute or two), you should be able to get to the following URLs:
 The CF Admin page should be available on the system running the containers at this link: [http://localhost:8500/CFIDE/administrator/index.cfm](http://localhost:8500/CFIDE/administrator/index.cfm).
 
 ### Step 3.1
+
 Check logs after containers are up
+
 ```bash
 docker compose logs -f
 ```
 
-### Step 4 - Stop 
+### Step 4 - Stop
+
 Stop the containers
+
 ```bash
 docker compose down
 ```
@@ -69,6 +81,7 @@ docker compose down
 Set `CERTBOT_TEST_CERT=0` in [`config.env`](config.env)
 
 ### Step 2 - Update docker containers
+
 ```bash
 docker compose down
 docker volume rm letsencrypt_certs
@@ -78,11 +91,11 @@ docker compose up -d
 
 ## Change Domain Name
 
-### Step 1 - Update config
+### Step 1 - Update domain name config
 
 Change the domain name in [`config.env`](config.env)
 
-### Step 2 - Update docker containers
+### Step 2 - Update docker containers for letsencrypt
 
 ```bash
 docker compose down
@@ -94,7 +107,9 @@ docker compose up -d
 ```
 
 ## Docker Cleanup
+
 Prune things [https://docs.docker.com/config/pruning/](https://docs.docker.com/config/pruning/)
+
 ```bash
 docker image prune
 docker container prune
@@ -102,6 +117,7 @@ docker volume prune
 ```
 
 ## Project structure
+
 - [`docker-compose.yml`](docker-compose.yml)
 - [`config.env`](config.env) - specifies domain name, email, and CF admin password
 - [`app/`](app/) - mapped to app folder in coldfusion container
