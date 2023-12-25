@@ -1,0 +1,17 @@
+services:
+    # run with docker compose watch (rather than docker compose up)
+    coldfusion:
+        image: adobecoldfusion/coldfusion2021:latest
+        # build directive runs dockerfile, and is needed in order for compose watch directives below to work
+        build: .
+        ports:
+        - "8500:8500"
+        environment:
+            - acceptEULA=YES
+            - password=123
+        develop:
+            # define the folder that should be watched/synced (one-way) from the host into the container
+            watch:
+                - action: sync
+                  path: .\app
+                  target: /app
