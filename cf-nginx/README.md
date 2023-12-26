@@ -21,7 +21,6 @@ Project structure:
 
 [_docker-compose.yml_](docker-compose.yml)
 ```
-version: "3" 
 services:
     coldfusion: 
         image: adobecoldfusion/coldfusion2021:latest

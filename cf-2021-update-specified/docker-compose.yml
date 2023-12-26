@@ -1,4 +1,3 @@
-version: "3" 
 services:
     coldfusion:
         image: adobecoldfusion/coldfusion2021:2021.0.4
