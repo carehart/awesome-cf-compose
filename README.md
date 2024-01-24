@@ -13,16 +13,18 @@ And if you "don't" (or "can't") use compose files, you can still get value from 
 So regard this project as a starting point for your further exploration, learning, and deployment, however it may be that you would run your containers.
 
 ## Contents
+The bulk of this page is a TOC to the various examples offered:
 - [Example Docker Compose files for ColdFusion configuration variations](#Example-Docker-Compose-files-for-ColdFusion-configuration-variations)
 - [Examples of Docker feature enablement](#Examples-of-Docker-feature-enablement)
 - [Examples of integrated services](#Examples-of-integrated-services)
+
+Then the remainder of the page has additional introductory information about this project:
 - [Getting started](#Getting-started)
-- [Considerations regarding configuration](#Considerations-regarding-configuration)
+- [Considerations regarding use of CF containers](#Considerations-regarding-use-of-CF-containers)
 - [Many kinds of examples planned](#Many-kinds-of-examples-planned)
 - [Contribute](#Contribute)
 
 ## Example Docker Compose files for ColdFusion configuration variations
-- [Considerations regarding use of CF containers](#Considerations-regarding-use-of-CF-containers)
 - [ColdFusion latest](/cf-latest) (showing base CF image, as "latest" image, whatever version that may be)
 - [ColdFusion 2021 latest](/cf-2021-latest) (showing how to specify "latest" CF2021 image, whatever update level that may be)
 - [ColdFusion 2021 specific update](/cf-2021-update-specified) (showing how to specify a specific update level for the CF2021 image)
@@ -87,7 +89,7 @@ So regard this project as a starting point for your further exploration, learnin
 ### Examples of multiple integrated services
 - ColdFusion with ? (a couple of examples)
 
-Not intending to all possible permutations of the above service integration examples. See [Considerations regarding configuration](#Considerations-regarding-configuration), for more.
+This is NOT intending to all possible permutations of the above service integration examples. See [Considerations regarding use of CF containers](#Considerations-regarding-use-of-CF-containers), for more.
 
 ## Getting started
 
@@ -120,11 +122,7 @@ To stop and remove the all containers of the example application, run:
 docker-compose down
 ```
 
-## Considerations regarding configuration
-
-Whether using or contributing to the repository, note  the following considerations.
-
-### Considerations regarding use of CF containers
+## Considerations regarding use of CF containers
 
 As a heads-up especially for those using the Adobe CF Docker images (though the concepts apply also in degrees to the Ortus CF/Lucee and native Lucee images), please note that the Adobe CF Docker images do offer many configuration options which are not being demonstrated in most of these simple examples. For more information on those options, see the [docs on using the Adobe Docker images](https://helpx.adobe.com/coldfusion/using/docker-images-coldfusion.html).
 
