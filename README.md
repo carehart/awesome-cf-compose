@@ -26,7 +26,7 @@ So regard this project as a starting point for your further exploration, learnin
 - [ColdFusion 2021 specific update](/cf-2021-update-specified) (showing how to specify a specific update level for the CF2021 image)
 - [ColdFusion 2018 latest](/cf-2018-latest) (showing how to specify "latest" CF2018 image, whatever update level that may be)
 - ColdFusion 2018 Update 1 (showing how to specify CF update level)
-- [ColdFusion 2021 with modules imported](/cf-2021-installmodules)
+- [ColdFusion 2021 with packages / modules to be imported](/cf-2021-installmodules)
 - [ColdFusion 2021 with admin config via cfsetup json file](/cf-2021-importcfsettings)
 - [ColdFusion with admin config via CAR file](/cf-2021-car-setup)
 - [ColdFusion with setup script enabled](/cf-2021-setupscript)
