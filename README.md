@@ -8,6 +8,8 @@ These Compose files can provide a starting point for how you could integrate dif
 
 (You can convert Docker Compose files to Kubernetes manifests using the free [kompose tool](https://kompose.io/). Also, recent versions of Docker now support deployment of compose files via [docker context](https://docs.docker.com/engine/context/working-with-contexts/) whether [into AWS ECS](https://docs.docker.com/engine/context/ecs-integration/) or [into Azure ACI](https://docs.docker.com/engine/context/aci-integration/).)
 
+And if you "don't" (or "can't") use compose files, you can still get value from most of the examples, as converting them to set the key/needed env vars in a Dockerfile instead would be trivial in most cases.
+
 So regard this project as a starting point for your further exploration, learning, and deployment, however it may be that you would run your containers.
 
 ## Contents
