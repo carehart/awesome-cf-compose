@@ -3,6 +3,10 @@ receivers:
     protocols:
       grpc:
       http:
+  otlp/2:
+    protocols:
+      grpc:
+      http:
 
 exporters:
   prometheus:

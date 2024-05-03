@@ -24,35 +24,47 @@ services:
         restart: always
         command: ["--config=/etc/otel-collector-config.yaml", "${OTELCOL_ARGS}"]
         volumes:
-        - ./otel-collector-config.yaml:/etc/otel-collector-config.yaml
+            - ./otel-collector-config.yaml:/etc/otel-collector-config.yaml
         ports:
-        - "1888:1888"   # pprof extension
-        - "8888:8888"   # Prometheus metrics exposed by the collector
-        - "8889:8889"   # Prometheus exporter metrics
-        - "13133:13133" # health_check extension
-        - "4317:4317"   # OTLP gRPC receiver
-        - "4318:4318"   # OTLP http receiver
-        - "55679:55679" # zpages extension
+            - "1888:1888"   # pprof extension
+            - "8888:8888"   # Prometheus metrics exposed by the collector
+            - "8889:8889"   # Prometheus exporter metrics
+            - "13133:13133" # health_check extension
+            - "4317:4317"   # OTLP gRPC receiver
+            - "4318:4318"   # OTLP http receiver
+            - "55679:55679" # zpages extension
         depends_on:
-        - jaeger-all-in-one
-        - zipkin-all-in-one
-    
+            - jaeger-all-in-one
+            - zipkin-all-in-one
+        
     prometheus:
         image: prom/prometheus:latest
         restart: always
         volumes:
-        - ./prometheus.yaml:/etc/prometheus/prometheus.yml
+            - ./prometheus.yaml:/etc/prometheus/prometheus.yml
         ports:
-        - "9090:9090"
+            - "9090:9090"
+    
+    # grafana:
+    #     image: grafana/grafana
+    #     container_name: grafana
+    #     ports:
+    #         - 3000:3000
+    #     restart: unless-stopped
+    #     environment:
+    #         - GF_SECURITY_ADMIN_USER=admin
+    #         - GF_SECURITY_ADMIN_PASSWORD=grafana
+    #     volumes:
+    #         - ./grafana:/etc/grafana/provisioning/datasources
         
     coldfusion:
         build: . 
         ports:
-        - "8500:8500"
-        - "8088:8088"
+            - "8500:8500"
+            - "8088:8088"
         environment:
             - acceptEULA=YES
             - password=123
-            - _JAVA_OPTIONS= -Dotel.javaagent.configuration-file=/opt/otelagent/config.properties -Dotel.javaagent.extensions=/opt/otelagent/cfmleditor-cfmlpage-instrumentation-1.0-all.jar -javaagent:"/opt/otelagent/opentelemetry-javaagent.jar"
+            - _JAVA_OPTIONS= -Dotel.javaagent.configuration-file=/opt/otelagent/config.properties -javaagent:"/opt/otelagent/opentelemetry-javaagent.jar"
         volumes:
             - ./app:/app
