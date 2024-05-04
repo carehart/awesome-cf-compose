@@ -45,17 +45,17 @@ services:
         ports:
             - "9090:9090"
     
-    # grafana:
-    #     image: grafana/grafana
-    #     container_name: grafana
-    #     ports:
-    #         - 3000:3000
-    #     restart: unless-stopped
-    #     environment:
-    #         - GF_SECURITY_ADMIN_USER=admin
-    #         - GF_SECURITY_ADMIN_PASSWORD=grafana
-    #     volumes:
-    #         - ./grafana:/etc/grafana/provisioning/datasources
+    grafana:
+        image: grafana/grafana
+        container_name: grafana
+        ports:
+            - 3000:3000
+        restart: unless-stopped
+        environment:
+            - GF_SECURITY_ADMIN_USER=admin
+            - GF_SECURITY_ADMIN_PASSWORD=grafana
+        volumes:
+            - ./grafana:/etc/grafana/provisioning/datasources
         
     coldfusion:
         build: . 
@@ -65,6 +65,6 @@ services:
         environment:
             - acceptEULA=YES
             - password=123
-            - _JAVA_OPTIONS= -Dotel.javaagent.configuration-file=/opt/otelagent/config.properties -javaagent:"/opt/otelagent/opentelemetry-javaagent.jar"
+            - _JAVA_OPTIONS= -Dotel.javaagent.configuration-file=/opt/otelagent/config.properties -Dio.opentelemetry.javaagent.slf4j.simpleLogger.logFile=/tmp/agent.log -Dotel.javaagent.debug=true -javaagent:"/opt/otelagent/opentelemetry-javaagent.jar"
         volumes:
-            - ./app:/app
+            - ./:/app
