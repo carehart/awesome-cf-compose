@@ -4,14 +4,14 @@
 Project structure:
 ```
 .
-├── docker-compose.yml
+├── compose.yaml
 ├── app
     └── test.cfm
     └── dumpserver.cfm
 
 ```
 
-[_docker-compose.yml_](docker-compose.yml)
+[_compose.yaml_](compose.yaml)
 ```
 services:
     coldfusion: 

@@ -11,7 +11,7 @@ There are more valuable benefits to the compose watch feature (such as watching 
 Project structure:
 ```
 .
-├── docker-compose.yml
+├── compose.yaml
 ├── Dockerfile
 ├── app
     └── test.cfm
@@ -19,7 +19,7 @@ Project structure:
 
 ```
 
-[_docker-compose.yml_](docker-compose.yml)
+[_compose.yaml_](compose.yaml)
 ```
 services:
     # run with docker compose watch (rather than docker compose up)

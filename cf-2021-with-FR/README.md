@@ -4,7 +4,7 @@
 Project structure:
 ```
 .
-├── docker-compose.yml
+├── compose.yaml
 ├── Dockerfile
 ├── app
     └── test.cfm
@@ -12,7 +12,7 @@ Project structure:
 
 ```
 
-[_docker-compose.yml_](docker-compose.yml)
+[_compose.yaml_](compose.yaml)
 ```
 FROM adobecoldfusion/coldfusion2021:latest
 
@@ -25,7 +25,7 @@ ADD https://download.fusionreactor.io/FR/Latest/libfrjvmti_x64.so /opt/fusionrea
 RUN chmod -R o=rwx /opt/fusionreactor/
 ```
 
-[_docker-compose.yml_](docker-compose.yml)
+[_compose.yaml_](compose.yaml)
 ```
 services:
     coldfusion:

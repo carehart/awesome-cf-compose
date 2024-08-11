@@ -7,7 +7,7 @@ Project structure:
 ```
 .
 ├── Dockerfile
-├── docker-compose.yml
+├── compose.yaml
 ├── app
 ├── app
     └── test.cfm
@@ -15,7 +15,7 @@ Project structure:
 
 ```
 
-[_docker-compose.yml_](docker-compose.yml)
+[_compose.yaml_](compose.yaml)
 ```
 services:
     lucee: 

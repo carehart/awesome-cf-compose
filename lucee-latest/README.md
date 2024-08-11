@@ -6,14 +6,14 @@ This is just the most basic demonstration, and while using the "latest" tag is a
 Project structure:
 ```
 .
-├── docker-compose.yml
+├── compose.yaml
 ├── app
     └── test.cfm
     └── dumpserver.cfm
 
 ```
 
-[_docker-compose.yml_](docker-compose.yml)
+[_compose.yaml_](compose.yaml)
 ```
 services:
     lucee: 

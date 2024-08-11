@@ -1,7 +1,7 @@
 ## Compose sample application
 ### ColdFusion standalone application
 
-This is a demonstration of fronting CF with nginx as the web server. As such, note that it will listen on the port indicated below for nginx (4000). You could of course modify the `docker-compose.yml` and the `nginx.conf` files to name a different port, or even use port 80. I leave you to explore [the docs for the nginx image](https://hub.docker.com/_/nginx) for more on its capabilities.
+This is a demonstration of fronting CF with nginx as the web server. As such, note that it will listen on the port indicated below for nginx (4000). You could of course modify the `compose.yaml` and the `nginx.conf` files to name a different port, or even use port 80. I leave you to explore [the docs for the nginx image](https://hub.docker.com/_/nginx) for more on its capabilities.
 
 Note how the example still uses an /app folder (mounted as a volume within the CFML container), in which CFML code can be placed, and that code can of course be executed using the nginx port. 
 
@@ -10,7 +10,7 @@ Note also how the nginx.conf has been configured to BLOCK access to the CFIDE fo
 Project structure:
 ```
 .
-├── docker-compose.yml
+├── compose.yaml
 ├── nginx.conf
 ├── README.md
 ├── app
@@ -19,7 +19,7 @@ Project structure:
 
 ```
 
-[_docker-compose.yml_](docker-compose.yml)
+[_compose.yaml_](compose.yaml)
 ```
 services:
     coldfusion: 

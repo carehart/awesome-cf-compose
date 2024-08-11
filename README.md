@@ -106,7 +106,7 @@ These instructions will get you through the bootstrap phase of creating and depl
 
 ### Running an example
 
-The root directory of each example contains the `docker-compose.yaml` which
+The root directory of each example contains the `compose.yaml` which
 describes the configuration of service components. All examples can be run in
 a local environment by going into the root directory of each one and executing:
 
@@ -128,9 +128,9 @@ As a heads-up especially for those using the Adobe CF Docker images (though the 
 
 In particular, note how the docs explain that the images presume to find files in an `/app` folder within the image--or a docker/kubernetes volume that's been mounted to that folder. The basic example in the `cf-latest` shows some sample code in that folder, implemented within the container. You could copy your own code into that folder within the image in a Dockerfile, etc.
 
-Note also that when running any of these Adobe CF examples, they default to using port 8500. If you may be running CF (or any app) that is already using port 8500, you will get an error, such as `Ports are not available: exposing port TCP 0.0.0.0:8500 -> 0.0.0.0:0`. You can modify the example docker-compose.yml offered here, changing the line referring to `"8500:8500"` so that the first number is whatever port you want to have the container use. So using `"8501:8500"` would cause it to be accessible instead at port 8501.
+Note also that when running any of these Adobe CF examples, they default to using port 8500. If you may be running CF (or any app) that is already using port 8500, you will get an error, such as `Ports are not available: exposing port TCP 0.0.0.0:8500 -> 0.0.0.0:0`. You can modify the example compose.yaml offered here, changing the line referring to `"8500:8500"` so that the first number is whatever port you want to have the container use. So using `"8501:8500"` would cause it to be accessible instead at port 8501.
 
-The previous comment applies similarly to the Ortus CF/Lucee and native Lucee images, which will default to using other ports, and again if you may be running something already on that port, then make the same sort of change in their respective docker-compose.yml file. 
+The previous comment applies similarly to the Ortus CF/Lucee and native Lucee images, which will default to using other ports, and again if you may be running something already on that port, then make the same sort of change in their respective compose.yml file. 
 
 ### Limiting the combinations of examples
 It would be tempting to create compose files that combine many things at once (integration of CF with Apache and mysql, or CF/Apache/mysql and the PMT, or CF/Apache/mysql and FR, or swapping out mysql for SQL Server, or IIS for Apache, and so on).
