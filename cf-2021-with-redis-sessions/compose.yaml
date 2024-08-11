@@ -1,0 +1,30 @@
+services:
+    redis:
+        image: redis:latest
+        ports:
+        - "6379:6379"
+        volumes:
+        - "redis_data:/data"
+    coldfusion:
+        image: adobecoldfusion/coldfusion2021
+        ports:
+            - "8500:8500"
+        environment:
+            - acceptEULA=YES
+            - password=123
+            - configureExternalSessions=true
+            - externalSessionsHost=redis
+            - externalSessionsPort=6379
+            - installModules=redissessionstorage
+            # importModules can be used instead to point to a file in container holding cfpm export
+            
+        depends_on:
+            - redis
+        volumes:
+            - ./app:/app
+
+volumes:
+    redis_data:
+        # if external: true enabled, then if you have created the volume external to compose, such as with:
+        # docker volume create redis_data, then the volume will remain available across compose down/up
+        external: true

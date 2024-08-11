@@ -43,7 +43,7 @@ Then the remainder of the page has additional introductory information about thi
 
 ### Examples of CF feature enablement
 - [ColdFusion with Solr and and PDFg (CFHTML2PDF) features enabled](/cf-2021-with-addons)
-- ColdFusion with Redis sessions enabled
+- [ColdFusion with Redis sessions enabled] (/cf-2021-with-redis-sessions)
 
 ### Examples of related CF feature enablements
 - [ColdFusion 2021 with PMT 2021 enabled](/cf-2021-pmt)
