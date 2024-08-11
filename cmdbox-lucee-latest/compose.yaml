@@ -5,3 +5,8 @@ services:
             - ./app:/app
         ports:
         - "8888:8080"
+        environment:
+        # if you want to see a Lucee admin, you must enable the commandbox "development" profile
+        - BOX_SERVER_PROFILE=development
+        # if you want to set a password in this file, set the next variable:
+        - cfconfig_adminPassword=testing123
