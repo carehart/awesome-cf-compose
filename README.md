@@ -158,11 +158,6 @@ For now, the lists below are from my initial effort that was laying out how to s
 
 Speaking of ACF, the project is also expected to include examples of integrating with things like the ColdFusion API Manager (since CF2016 Enterprise) and the ColdFusion Performance Monitoring Toolkit (since CF2018 Standard and Enterprise), as well as demonstrations of implementation of other monitoring solutions, such as FusionReactor, SeeFusion, and other APMs.
 
-[Contributions](#Contributions) are welcome.
-
-
-
-<!--lint disable awesome-toc-->
 ## Contribute
 
-We welcome examples that help people understand how to use Docker Compose for common applications. Check the [Contribution Guide](CONTRIBUTING.md) for more details.
+We welcome examples that help people understand how to use CF and Lucee images with Docker Compose for variious purposes. Check the [Contribution Guide](CONTRIBUTING.md) for more details.
