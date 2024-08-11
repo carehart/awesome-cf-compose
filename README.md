@@ -6,7 +6,7 @@ This effort is based on the more general-purpose https://github.com/docker/aweso
 
 These Compose files can provide a starting point for how you could integrate different services and manage their deployment with Docker Compose. Starting with Compose is a great first step to ultimate orchestration of containers--whether via Kubernetes, Swarm, or otherwise.
 
-(You can convert Docker Compose files to Kubernetes manifests using the free [kompose tool](https://kompose.io/). Also, recent versions of Docker now support deployment of compose files via [docker context](https://docs.docker.com/engine/context/working-with-contexts/) whether [into AWS ECS](https://docs.docker.com/engine/context/ecs-integration/) or [into Azure ACI](https://docs.docker.com/engine/context/aci-integration/).)
+(You can convert Docker Compose files to Kubernetes manifests using the free [kompose tool](https://kompose.io/). Also, there are integration options with Compose files in via the CLI features of popular cloud services, such as is [documented for AWS ECS](https://github.com/aws/amazon-ecs-cli) or [for Azure ACI](https://learn.microsoft.com/en-us/cli/azure/containerapp/compose).)
 
 And if you "don't" (or "can't") use compose files, you can still get value from most of the examples, as converting them to set the key/needed env vars in a Dockerfile instead would be trivial in most cases.
 
@@ -98,12 +98,11 @@ These instructions will get you through the bootstrap phase of creating and depl
 
 ### Prerequisites
 
-- Make sure that you have Docker and Docker Compose installed
-  - Windows or macOS:
-    [Install Docker Desktop](https://www.docker.com/get-started)
-  - Linux: [Install Docker](https://www.docker.com/get-started) and then
-    [Docker Compose](https://github.com/docker/compose)
-- Download some or all of the examples from this repository.
+- Make sure that you have Docker and Docker Compose installed, whether for Windows, macOS, or Linux using either:
+  - [Docker Desktop](https://www.docker.com/products/docker-desktop/) or
+  - [Docker Engine](https://docs.docker.com/engine/install/) and then
+    [Docker Compose](https://docs.docker.com/compose/install/)
+- Download some or all of the examples from this repository
 
 ### Running an example
 
