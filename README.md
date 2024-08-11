@@ -30,20 +30,19 @@ Then the remainder of the page has additional introductory information about thi
 - [ColdFusion 2021 latest](/cf-2021-latest) (showing how to specify "latest" CF2021 image, whatever update level that may be)
 - [ColdFusion 2021 specific update](/cf-2021-update-specified) (showing how to specify a specific update level for the CF2021 image)
 - [ColdFusion 2018 latest](/cf-2018-latest) (showing how to specify "latest" CF2018 image, whatever update level that may be)
-- ColdFusion 2018 Update 1 (showing how to specify CF update level)
 - [ColdFusion 2021 with packages / modules to be imported](/cf-2021-installmodules)
 - [ColdFusion 2021 with admin config via cfsetup json file](/cf-2021-importcfsettings)
 - [ColdFusion with admin config via CAR file](/cf-2021-car-setup)
 - [ColdFusion with setup script enabled](/cf-2021-setupscript)
+- [ColdFusion as a Dockerfile only](/cf-2021-latest-as-dockerfile) (for those  who don't plan to or can't use Compose)
+- [ColdFusion with site root in a subfolder](/cf-app_in_subfolder) (for those who want to run the root of their site as a ***subfolder*** of /app)
+- [ColdFusion with specific Java version](/cf-2021-specific-java-version) 
 - ColdFusion with secure profile enabled
 - ColdFusion with mysql jar embedded
-- [ColdFusion as a Dockerfile only](/cf-2021-latest-as-dockerfile) (For people who don't plan to or can't use Compose)
-- [ColdFusion with site root in a subfolder](/cf-app_in_subfolder) (For people who want to run the root of their site as a subfolder of /app)
-- [ColdFusion with specific Java version](/cf-2021-specific-java-version) 
 
 ### Examples of CF feature enablement
 - [ColdFusion with Solr and and PDFg (CFHTML2PDF) features enabled](/cf-2021-with-addons)
-- [ColdFusion with Redis sessions enabled] (/cf-2021-with-redis-sessions)
+- [ColdFusion with Redis sessions enabled](/cf-2021-with-redis-sessions)
 
 ### Examples of related CF feature enablements
 - [ColdFusion 2021 with PMT 2021 enabled](/cf-2021-pmt)
