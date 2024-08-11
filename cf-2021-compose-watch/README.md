@@ -40,14 +40,14 @@ services:
                   target: /app
 ```
 
-## Deploy with docker-compose watch
+## Deploy with docker compose watch
 
 Unlike nearly all other examples here, to leverage the "watch" feature of Docker Compose, this compose file should be started with `docker compose watch` rather `than docker compose up`.
 
 Note also that the watch feature defaults to running containers in the background, so there's no need for the `-d` argument (as used with other `docker compose up` examples here).
 
 ```
-$ docker-compose watch
+$ docker compose watch
 [+] Building 2.0s (7/7) FINISHED                                                                         docker:default
  => [coldfusion internal] load build definition from Dockerfile                                                    0.2s
  => => transferring dockerfile: 96B                                                                                0.1s
@@ -97,5 +97,5 @@ $ curl http://localhost:8500/dumpserver.cfm
 
 Stop and remove the containers (to be clear, `docker compose down` still works, even though this was started with `docker compose watch`)
 ```
-$ docker-compose down
+$ docker compose down
 ```

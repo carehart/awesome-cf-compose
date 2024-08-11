@@ -24,10 +24,10 @@ services:
         - "8888:8888"
 ```
 
-## Deploy with docker-compose
+## Deploy with docker compose
 
 ```
-$ docker-compose up -d
+$ docker compose up -d
  - Network lucee-latest_default    Created                                                                         0.0s
  - Container lucee-latest-lucee-1  Started                                                                         0.3s
 
@@ -122,5 +122,5 @@ Note that as of Lucee 5.3.9.141, this value defaults to: -Xms64m -Xmx512m. If yo
 
 ## Stop and remove the containers
 ```
-$ docker-compose down
+$ docker compose down
 ```

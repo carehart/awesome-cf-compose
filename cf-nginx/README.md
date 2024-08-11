@@ -61,10 +61,10 @@ http {
 }
 ```
 
-## Deploy with docker-compose
+## Deploy with docker compose
 
 ```
-$ docker-compose up -d
+$ docker compose up -d
 - Network cf-nginx_default         Created                                                                       0.8s
  - Container cf-nginx-coldfusion-1  Created                                                                       0.2s
  - Container cf-nginx-nginx-1  Created                                                                       0.2s
@@ -99,5 +99,5 @@ $ curl http://localhost:4000/dumpserver.cfm
 
 Stop and remove the containers
 ```
-$ docker-compose down
+$ docker compose down
 ```

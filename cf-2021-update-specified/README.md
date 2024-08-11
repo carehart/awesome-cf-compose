@@ -25,10 +25,10 @@ services:
             - ./app:/app
 ```
 
-## Deploy with docker-compose
+## Deploy with docker compose
 
 ```
-$ docker-compose up -d
+$ docker compose up -d
 - Network cf-latest_default         Created                                                                       0.8s
  - Container cf-latest-coldfusion-1  Created                                                                       0.2s
 Attaching to cf-latest-coldfusion-1
@@ -66,5 +66,5 @@ $ curl http://localhost:8500/dumpserver.cfm
 
 Stop and remove the containers
 ```
-$ docker-compose down
+$ docker compose down
 ```

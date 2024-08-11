@@ -25,10 +25,10 @@ services:
             - ./app:/app
 ```
 
-## Deploy with docker-compose
+## Deploy with docker compose
 
 ```
-$ docker-compose up -d
+$ docker compose up -d
  ✔ Network cf-2023-latest_default         Created                                                                  0.0s
  ✔ Container cf-2023-latest-coldfusion-1  Created                                                                  0.0s
 Attaching to coldfusion-1
@@ -96,5 +96,5 @@ $ curl http://localhost:8500/dumpserver.cfm
 
 Stop and remove the containers
 ```
-$ docker-compose down
+$ docker compose down
 ```

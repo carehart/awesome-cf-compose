@@ -24,10 +24,10 @@ services:
         - "8888:8080"
 ```
 
-## Deploy with docker-compose
+## Deploy with docker compose
 
 ```
-$ docker-compose up -d
+$ docker compose up -d
  - Network cmdbox-lucee-latest_default    Created                                                                0.0s
  - Container cmdbox-lucee-latest-lucee-1  Created                                                                0.1s
 ```
@@ -96,5 +96,5 @@ With Lucee images in Commandbox, commandbox offers a cfconfig property to contro
 
 ## Stop and remove the containers
 ```
-$ docker-compose down
+$ docker compose down
 ```

@@ -111,7 +111,7 @@ describes the configuration of service components. All examples can be run in
 a local environment by going into the root directory of each one and executing:
 
 ```console
-docker-compose up -d
+docker compose up -d
 ```
 
 Check the `README.md` of each example to get more details on the structure and expected output, if any.
@@ -119,7 +119,7 @@ Check the `README.md` of each example to get more details on the structure and e
 To stop and remove the all containers of the example application, run:
 
 ```console
-docker-compose down
+docker compose down
 ```
 
 ## Considerations regarding use of CF containers
@@ -130,7 +130,7 @@ In particular, note how the docs explain that the images presume to find files i
 
 Note also that when running any of these Adobe CF examples, they default to using port 8500. If you may be running CF (or any app) that is already using port 8500, you will get an error, such as `Ports are not available: exposing port TCP 0.0.0.0:8500 -> 0.0.0.0:0`. You can modify the example compose.yaml offered here, changing the line referring to `"8500:8500"` so that the first number is whatever port you want to have the container use. So using `"8501:8500"` would cause it to be accessible instead at port 8501.
 
-The previous comment applies similarly to the Ortus CF/Lucee and native Lucee images, which will default to using other ports, and again if you may be running something already on that port, then make the same sort of change in their respective compose.yml file. 
+The previous comment applies similarly to the Ortus CF/Lucee and native Lucee images, which will default to using other ports, and again if you may be running something already on that port, then make the same sort of change in their respective compose.yaml file. 
 
 ### Limiting the combinations of examples
 It would be tempting to create compose files that combine many things at once (integration of CF with Apache and mysql, or CF/Apache/mysql and the PMT, or CF/Apache/mysql and FR, or swapping out mysql for SQL Server, or IIS for Apache, and so on).

@@ -41,10 +41,10 @@ services:
             - ./app:/app```
 ```
 
-## Deploy with docker-compose
+## Deploy with docker compose
 
 ```
-$ docker-compose up -d
+$ docker compose up -d
  - Network cf-2021-latest-fr_default         Created                                                                0.0s
  - Container cf-2021-latest-fr-coldfusion-1  Created                                                                0.0s
 Attaching to cf-2021-latest-fr-coldfusion-1
@@ -79,5 +79,5 @@ $ curl http://localhost:8088/
 
 Stop and remove the containers
 ```
-$ docker-compose down
+$ docker compose down
 ```
