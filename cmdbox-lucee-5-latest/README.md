@@ -28,8 +28,8 @@ services:
 
 ```
 $ docker compose up -d
- - Network cmdbox-lucee-latest_default    Created                                                                0.0s
- - Container cmdbox-lucee-latest-lucee-1  Created                                                                0.1s
+ - Network cmdbox-lucee-5-latest_default    Created                                                                0.0s
+ - Container cmdbox-lucee-5-latest-lucee-1  Created                                                                0.1s
 ```
 
 ## Expected result
@@ -38,7 +38,7 @@ Listing containers must show one container running and the port mapping as below
 ```
 $ docker ps
 CONTAINER ID   IMAGE                COMMAND             CREATED          STATUS          PORTS                              NAMES
-98446b4b8ee5   ortussolutions/commandbox:lucee5               "/bin/sh -c $BUILD_D…"   52 seconds ago   Up 51 seconds (health: starting)   8443/tcp, 0.0.0.0:8888->8080/tcp                           cmdbox-lucee-latest-lucee-1
+98446b4b8ee5   ortussolutions/commandbox:lucee5               "/bin/sh -c $BUILD_D…"   52 seconds ago   Up 51 seconds (health: starting)   8443/tcp, 0.0.0.0:8888->8080/tcp                           cmdbox-lucee-latest-5-lucee-1
 ```
 
 ## Running requests
