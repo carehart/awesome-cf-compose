@@ -26,6 +26,7 @@ Then the remainder of the page has additional introductory information about thi
 
 ## Example Docker Compose files for ColdFusion configuration variations
 - [ColdFusion latest](/cf-latest) (showing base CF image, as "latest" image, whatever version that may be)
+- [ColdFusion 2023 latest](/cf-2023-latest) (showing how to specify "latest" CF2023 image, whatever update level that may be)
 - [ColdFusion 2021 latest](/cf-2021-latest) (showing how to specify "latest" CF2021 image, whatever update level that may be)
 - [ColdFusion 2021 specific update](/cf-2021-update-specified) (showing how to specify a specific update level for the CF2021 image)
 - [ColdFusion 2018 latest](/cf-2018-latest) (showing how to specify "latest" CF2018 image, whatever update level that may be)
