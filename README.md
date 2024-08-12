@@ -55,6 +55,7 @@ Then the remainder of the page has additional introductory information about thi
 
 ## Examples of Commandbox images for ACF and Lucee
 - [Commandbox image with latest Lucee5 ](/cmdbox-lucee-5-latest) (showing base lucee5 image, as "latest" image, whatever version that may be)
+- [Commandbox image with latest Lucee6 ](/cmdbox-lucee-6-latest) (showing base lucee6 image, as "latest" image, whatever version that may be)
 
 ## Examples of Docker feature enablement
 - ColdFusion with CF webroot copied into image

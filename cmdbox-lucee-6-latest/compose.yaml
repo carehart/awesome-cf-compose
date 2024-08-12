@@ -1,0 +1,14 @@
+services:
+    lucee: 
+        # as of my writing this on 8/11/24, there is no "lucee6" tag, nor does "lucee" alone work
+        # but I found that the lucee-light tag does load a 6.1.0.243 version
+        image: ortussolutions/commandbox:lucee-light
+        volumes:
+            - ./app:/app
+        ports:
+        - "8888:8080"
+        environment:
+        # if you want to see a Lucee admin, you must enable the commandbox "development" profile
+        - BOX_SERVER_PROFILE=development
+        # if you want to set a password in this file, set the next variable:
+        - cfconfig_adminPassword=testing123
