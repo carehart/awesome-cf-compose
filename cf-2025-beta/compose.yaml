@@ -1,0 +1,13 @@
+services:
+    coldfusion:
+        # the CF2025 beta image is currently available at dockerhub (during the prerelease) via the following path/name
+        image: adobecoldfusion/cfnextbeta:latest
+        ports:
+        - "8500:8500"
+        environment:
+            - acceptEULA=YES
+            # while this compose file shows the password passed in as an env var (like previous compose files here
+            # in the folder /cf-2025-beta-secret I show storing it instead via the new container "secret" feature
+            - password=123
+        volumes:
+            - ./app:/app
