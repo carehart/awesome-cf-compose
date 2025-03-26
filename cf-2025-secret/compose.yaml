@@ -1,0 +1,22 @@
+services:
+    coldfusion:
+        image: adobecoldfusion/coldfusion2025
+        ports:
+        - "8500:8500"
+        environment:
+            - acceptEULA=YES
+        volumes:
+        - "./app/:/app"
+        secrets:
+        # cf2025 supports use of container "secrets", which are supported via Docker compose without need of using swarm.
+        # on the surface it may seem "barely secure/secret". The benefit is that the value CANNOT be observed via environment variables
+        # within the container, such as via CF's server.system.environment variable/struct.
+        - source: password
+          target: /run/secrets/password
+secrets:
+    password:
+        file: cfpswd.txt
+
+# there is also support for setting secrets other ways, as well as (non-secret) configs. 
+# these other options are discussed in the CF2025 beta docs, and I plan to offer new compose examples as well
+# my main goal in offering this one is to help people know about this option, and that it does NOT require using Swarm

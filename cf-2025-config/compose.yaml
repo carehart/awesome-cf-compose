@@ -1,0 +1,25 @@
+services:
+    coldfusion:
+        image: adobecoldfusion/coldfusion2025
+        ports:
+        - "8500:8500"
+        environment:
+        - acceptEULA=YES
+        - password=123
+        volumes:
+        - "./app/:/app"
+        configs:
+            # the source and target name must match the name of an env var that CF supports for configuring containers,
+            # while the path where the target (which indicates where the config) is expected to be found in the root, by convention.
+            # that "expected location" can be modfied by another env var, cfconfigPath (new to CF2025)
+            - source: installModules
+              target: /installModules
+configs:
+    # as above, the names defined within this "configs" must match the name of a supported CF container config env var.
+    # as for the file name (and location within the container), that is something you're free to choose
+    installModules:
+        file: installModules.txt
+
+# there is also support for setting configs other ways, as well as secrets. these other options are discussed 
+# in the CF2025 beta docs, and I plan to offer more  compose examples showing such other "config" alternatives.
+# my main goal in offering this one is to help people know about this option, and that it does NOT require using Swarm

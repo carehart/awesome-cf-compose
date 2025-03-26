@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE cross-domain-policy SYSTEM "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd">
+<!--Generic policy file for flex app access, it should be made more restrictive -->
+<cross-domain-policy>
+<site-control permitted-cross-domain-policies="master-only"/>
+<!-- <allow-access-from domain="*.example.com"/> -->
+</cross-domain-policy>
