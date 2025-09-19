@@ -1,12 +1,17 @@
 services:
     addons:
+        #image: adobecoldfusion/coldfusionaddons2023
+        #image: adobecoldfusion/coldfusionaddons2025
         image: adobecoldfusion/coldfusionaddons2021
         environment:
             - acceptEULA=YES
         ports: 
+            # following port needs to be 8995 for CF2023, 8997 for CF2025
             - "8993:8993"
 
     coldfusion:
+        #image: adobecoldfusion/coldfusion2023
+        #image: adobecoldfusion/coldfusion2024
         image: adobecoldfusion/coldfusion2021
         ports:
             - "8500:8500"
@@ -16,6 +21,7 @@ services:
             # following needed for either solr or pdfg
             - configureExternalAddons=true
             - addonsHost=addons
+            # following port needs to be 8995 for CF2023, 8997 for CF2025
             - addonsPort=8993
             - installModules=htmltopdf,search
             # importModules can be used instead to point to a file in container holding cfpm export
@@ -24,4 +30,4 @@ services:
         depends_on:
             - addons
         volumes:
-            - ./app:/app
+            - ./app:/app  
