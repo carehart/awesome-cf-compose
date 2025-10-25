@@ -17,7 +17,7 @@ Project structure:
 ```
 services:
     coldfusion: 
-        image: adobecoldfusion/coldfusion2021:latest
+        image: adobecoldfusion/coldfusion:latest
         ports:
         - "8500:8500"
         environment:
@@ -50,7 +50,7 @@ Listing containers must show one container running and the port mapping as below
 ```
 $ docker ps
 CONTAINER ID        IMAGE                                                    COMMAND                  CREATED              STATUS                        PORTS                                         NAMES
-d935f819f622        adobecoldfusion/coldfusion2021:latest   "sh /opt/startup/sta…"   About a minute ago   Up About a minute (healthy)   8118/tcp, 45564/tcp, 0.0.0.0:8500->8500/tcp   cf-latest_coldfusion_1
+feaa5ee4f3ab   adobecoldfusion/coldfusion:latest   "/bin/bash /opt/star…"   4 minutes ago   Up 4 minutes (healthy)   7071/tcp, 8122/tcp, 45564/tcp, 0.0.0.0:8500->8500/tcp, [::]:8500->8500/tcp   cf-latest-coldfusion-1
 
 ```
 
@@ -61,7 +61,7 @@ Or run `http://localhost:8500/test.cfm` in your web browser to see the test page
 $ curl http://localhost:8500/test.cfm
 
 Which will show:
-Hello World! at 03-Oct-2021 02:35:44
+Hello World! at 24-Oct-2025 20:35:44
 ```
 Run this to see a dump of the server.coldfusion struct within the container: navigate to `http://localhost:8500/dumpserver.cfm` in your web browser or run:
 ```
