@@ -70,7 +70,7 @@ b3c41fac7599   cf-2021-latest-fr_coldfusion   "sh /opt/startup/sta…"   About a
 
 After the application starts, navigate to `http://localhost:8500` in your web browser to see available files in CF's default webroot (added to by the /app volume mapping)
 
-See readme in [cf-latest/README.md](../cf-latest/README.md) folder for more.
+See readme in [/examples/cf-latest/README.md](/examples/cf-latest/README.md) folder for more.
 
 Run `http://localhost:8088` in your web browser to see the FusionReactor login page, or run via curl:
 ```
