@@ -25,37 +25,37 @@ Then the remainder of the page has additional introductory information about thi
 - [Contribute](#Contribute)
 
 ## Example Docker Compose files for ColdFusion configuration variations
-- [ColdFusion latest](/cf-latest) (showing base CF image, as "latest" image, whatever version that may be)
-- [ColdFusion 2023 latest](/cf-2023-latest) (showing how to specify "latest" CF2023 image, whatever update level that may be)
-- [ColdFusion 2021 latest](/cf-2021-latest) (showing how to specify "latest" CF2021 image, whatever update level that may be)
-- [ColdFusion 2021 specific update](/cf-2021-update-specified) (showing how to specify a specific update level for the CF2021 image)
-- [ColdFusion 2018 latest](/cf-2018-latest) (showing how to specify "latest" CF2018 image, whatever update level that may be)
-- [ColdFusion 2021 with packages / modules to be imported](/cf-2021-installmodules)
-- [ColdFusion 2021 with admin config via cfsetup json file](/cf-2021-importcfsettings)
-- [ColdFusion with admin config via CAR file](/cf-2021-car-setup)
-- [ColdFusion with setup script enabled](/cf-2021-setupscript)
-- [ColdFusion as a Dockerfile only](/cf-2021-latest-as-dockerfile) (for those  who don't plan to or can't use Compose)
-- [ColdFusion with site root in a subfolder](/cf-app_in_subfolder) (for those who want to run the root of their site as a ***subfolder*** of /app)
-- [ColdFusion with specific Java version](/cf-2021-specific-java-version) 
+- [ColdFusion latest](/examples//cf-latest) (showing base CF image, as "latest" image, whatever version that may be)
+- [ColdFusion 2023 latest](/examples/cf-2023-latest) (showing how to specify "latest" CF2023 image, whatever update level that may be)
+- [ColdFusion 2021 latest](/examples/cf-2021-latest) (showing how to specify "latest" CF2021 image, whatever update level that may be)
+- [ColdFusion 2021 specific update](/examples/cf-2021-update-specified) (showing how to specify a specific update level for the CF2021 image)
+- [ColdFusion 2018 latest](/examples/cf-2018-latest) (showing how to specify "latest" CF2018 image, whatever update level that may be)
+- [ColdFusion 2021 with packages / modules to be imported](/examples/cf-2021-installmodules)
+- [ColdFusion 2021 with admin config via cfsetup json file](/examples/cf-2021-importcfsettings)
+- [ColdFusion with admin config via CAR file](/examples/cf-2021-car-setup)
+- [ColdFusion with setup script enabled](/examples/cf-2021-setupscript)
+- [ColdFusion as a Dockerfile only](/examples/cf-2021-latest-as-dockerfile) (for those  who don't plan to or can't use Compose)
+- [ColdFusion with site root in a subfolder](/examples/cf-app_in_subfolder) (for those who want to run the root of their site as a ***subfolder*** of /app)
+- [ColdFusion with specific Java version](/examples/cf-2021-specific-java-version) 
 - ColdFusion with secure profile enabled
 - ColdFusion with mysql jar embedded
 
 ### Examples of CF feature enablement
-- [ColdFusion with Solr and and PDFg (CFHTML2PDF) features enabled](/cf-2021-with-addons)
-- [ColdFusion with Redis sessions enabled](/cf-2021-with-redis-sessions)
+- [ColdFusion with Solr and and PDFg (CFHTML2PDF) features enabled](/examples/cf-2021-with-addons)
+- [ColdFusion with Redis sessions enabled](/examples/cf-2021-with-redis-sessions)
 
 ### Examples of related CF feature enablements
-- [ColdFusion 2021 with PMT 2021 enabled](/cf-2021-pmt)
-- [ColdFusion 2018 with PMT 2018 enabled](/cf-2018-pmt)
-- [ColdFusion with API Manager enabled](/cf-2021-api-manager)
+- [ColdFusion 2021 with PMT 2021 enabled](/examples/cf-2021-pmt)
+- [ColdFusion 2018 with PMT 2018 enabled](/examples/cf-2018-pmt)
+- [ColdFusion with API Manager enabled](/examples/cf-2021-api-manager)
 
 ## Examples of Lucee
-- [Lucee latest](/lucee-latest) (showing base lucee image, as "latest" image, whatever version that may be)
-- [Lucee with FusionReactor enabled](/lucee-with-fr)
+- [Lucee latest](/examples/lucee-latest) (showing base lucee image, as "latest" image, whatever version that may be)
+- [Lucee with FusionReactor enabled](/examples/lucee-with-fr)
 
 ## Examples of Commandbox images for ACF and Lucee
-- [Commandbox image with latest Lucee5 ](/cmdbox-lucee-5-latest) (showing base lucee5 image, as "latest" image, whatever version that may be)
-- [Commandbox image with latest Lucee6 ](/cmdbox-lucee-6-latest) (showing base lucee6 image, as "latest" image, whatever version that may be)
+- [Commandbox image with latest Lucee5 ](/examples/cmdbox-lucee-5-latest) (showing base lucee5 image, as "latest" image, whatever version that may be)
+- [Commandbox image with latest Lucee6 ](/examples/cmdbox-lucee-6-latest) (showing base lucee6 image, as "latest" image, whatever version that may be)
 
 ## Examples of Docker feature enablement
 - ColdFusion with CF webroot copied into image
@@ -63,15 +63,15 @@ Then the remainder of the page has additional introductory information about thi
 - ColdFusion with CF webroot as Docker volume
 
 ### Examples of FusionReactor integration
-- [ColdFusion 2021 with FusionReactor enabled](/cf-2021-with-FR)
-- [Lucee with FusionReactor enabled](/lucee-with-fr)
+- [ColdFusion 2021 with FusionReactor enabled](/examples/cf-2021-with-FR)
+- [Lucee with FusionReactor enabled](/examples/lucee-with-fr)
 
 ## Examples of integrated services
 
 ### Examples of web server integration
 - ColdFusion with Apache web server
 - ColdFusion with IIS web server
-- [ColdFusion with nginx web server](/cf-nginx)
+- [ColdFusion with nginx web server](/examples/cf-nginx)
 
 ### Examples of database integration
 - ColdFusion with MySQL
