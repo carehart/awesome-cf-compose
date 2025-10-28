@@ -53,6 +53,7 @@ Then the remainder of the page has additional introductory information about thi
 ## Examples of Lucee
 - [Lucee latest](/examples/lucee-latest) (showing base lucee image, as "latest" image, whatever version that may be)
 - [Lucee with FusionReactor enabled](/examples/lucee-with-fr)
+- [Lucee as a Dockerfile only](/examples/cf-lucee-as-dockerfile) (for those  who don't plan to or can't use Compose)
 
 ## Examples of Commandbox images for ACF and Lucee
 - [Commandbox image with latest Lucee5](/examples/cmdbox-lucee-5-latest) (showing base lucee5 image, as "latest" image, whatever version that may be)
