@@ -1,3 +1,3 @@
 FROM lucee/lucee
 
-COPY ./app /app
+COPY ./app /var/www

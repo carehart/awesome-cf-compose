@@ -1,5 +1,5 @@
 FROM lucee/lucee
-COPY ./app /app
+
 RUN mkdir -p /opt/fusionreactor
 
 ADD https://download.fusionreactor.io/FR/Latest/fusionreactor.jar /opt/fusionreactor/fusionreactor.jar

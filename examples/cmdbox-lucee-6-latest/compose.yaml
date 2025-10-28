@@ -1,8 +1,6 @@
 services:
     lucee: 
-        # as of my writing this on 8/11/24, there is no "lucee6" tag, nor does "lucee" alone work
-        # but I found that the lucee-light tag does load a 6.1.0.243 version
-        image: ortussolutions/commandbox:lucee-light
+        image: ortussolutions/commandbox:lucee6
         volumes:
             - ./app:/app
         ports:

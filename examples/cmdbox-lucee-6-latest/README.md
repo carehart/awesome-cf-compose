@@ -1,8 +1,6 @@
 ## Compose sample application
 ### Commandbox Lucee standalone application
 
-This is just the most basic demonstration, and while using the "latest" tag is an option, it's not the best. See other examples that show pointing to a specific tag (for a specific update of a specific Lucee version).
-
 Project structure:
 ```
 .
@@ -17,9 +15,9 @@ Project structure:
 ```
 services:
     lucee: 
-        # as of my writing this on 8/11/24, there is no "lucee6" tag, nor does "lucee" alone work
-        # but I found that the lucee-light tag does load a 6.1.0.243 version
-              image: ortussolutions/commandbox:lucee-light
+services:
+    lucee: 
+        image: ortussolutions/commandbox:lucee6
         volumes:
             - ./app:/app
         ports:
@@ -45,7 +43,7 @@ Listing containers must show one container running and the port mapping as below
 ```
 $ docker ps
 CONTAINER ID   IMAGE                COMMAND             CREATED          STATUS          PORTS                              NAMES
-98446b4b8ee5   ortussolutions/commandbox:lucee6-light               "/bin/sh -c $BUILD_D…"   52 seconds ago   Up 51 seconds (health: starting)   8443/tcp, 0.0.0.0:8888->8080/tcp                           cmdbox-lucee-latest-6-lucee-1
+49675b3f3d86   ortussolutions/commandbox:lucee6   "/__cacert_entrypoin…"   About a minute ago   Up About a minute (healthy)   0.0.0.0:8888->8080/tcp, [::]:8888->8080/tcp   cmdbox-lucee-6-latest-lucee-1
 ```
 
 ## Running requests

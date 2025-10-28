@@ -60,8 +60,8 @@ Then the remainder of the page has additional introductory information about thi
 - [Lucee as a Dockerfile only](/examples/lucee-as-dockerfile) (for those  who don't plan to or can't use Compose)
 
 ## Examples of Commandbox images for ACF and Lucee
-- [Commandbox image with latest Lucee5](/examples/cmdbox-lucee-5-latest) (showing base lucee5 image, as "latest" image, whatever version that may be)
-- [Commandbox image with latest Lucee6](/examples/cmdbox-lucee-6-latest) (showing base lucee6 image, as "latest" image, whatever version that may be)
+- [Commandbox image with latest Lucee 6](/examples/cmdbox-lucee-6-latest) 
+- [Commandbox image with latest Lucee 5](/examples/cmdbox-lucee-5-latest) 
 
 ## Examples of Docker feature enablement
 - [ColdFusion with host /app folder changes watched via Docker Compost Watch](/examples/cf-2021-compose-watch)
