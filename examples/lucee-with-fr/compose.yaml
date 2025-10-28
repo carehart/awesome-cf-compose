@@ -1,13 +1,11 @@
 services:
     lucee: 
         build: . 
+        volumes:
+            - ./app:/var/www
         environment:
         - LUCEE_JAVA_OPTS=-javaagent:/opt/fusionreactor/fusionreactor.jar=name=lucee-fr,address=8088
-        #volumes:
-            #- type: bind
-            #  source: ./lucee-admin-password/password.txt
-            #  target: /opt/lucee/server/lucee-server/context/password.txt
+        
         ports:
         - "8888:8888"
         - "8088:8088"
-        # see readme for optional elements to set java options, copy in code, and/or set Lucee admin password
