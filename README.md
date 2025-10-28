@@ -54,10 +54,11 @@ Then the remainder of the page has additional introductory information about thi
 - [Lucee with FusionReactor enabled](/examples/lucee-with-fr)
 
 ## Examples of Commandbox images for ACF and Lucee
-- [Commandbox image with latest Lucee5 ](/examples/cmdbox-lucee-5-latest) (showing base lucee5 image, as "latest" image, whatever version that may be)
-- [Commandbox image with latest Lucee6 ](/examples/cmdbox-lucee-6-latest) (showing base lucee6 image, as "latest" image, whatever version that may be)
+- [Commandbox image with latest Lucee5](/examples/cmdbox-lucee-5-latest) (showing base lucee5 image, as "latest" image, whatever version that may be)
+- [Commandbox image with latest Lucee6](/examples/cmdbox-lucee-6-latest) (showing base lucee6 image, as "latest" image, whatever version that may be)
 
 ## Examples of Docker feature enablement
+- [ColdFusion with host /app folder changes watched via Docker Compost Watch](/examples/cf-2021-compose-watch)
 - ColdFusion with CF webroot copied into image
 - ColdFusion with CF webroot as host bind mount
 - ColdFusion with CF webroot as Docker volume
