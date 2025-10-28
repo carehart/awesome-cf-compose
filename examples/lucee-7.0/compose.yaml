@@ -1,0 +1,7 @@
+services:
+    lucee: 
+        image: lucee/lucee:7.0
+        volumes:
+            - ./app:/var/www
+        ports:
+        - "8888:8888"

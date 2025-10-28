@@ -17,7 +17,7 @@ Project structure:
 ```
 services:
     lucee: 
-        image: lucee/lucee:6.0
+        image: lucee/lucee:6.1
         ports:
         - "8888:8888"
 ```

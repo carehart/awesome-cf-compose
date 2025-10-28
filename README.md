@@ -52,6 +52,10 @@ Then the remainder of the page has additional introductory information about thi
 
 ## Examples of Lucee
 - [Lucee latest](/examples/lucee-latest) (showing base lucee image, as "latest" image, whatever version that may be)
+- [Lucee latest 7.0](/examples/lucee-7.0) 
+- [Lucee latest 6.2](/examples/lucee-6.2) 
+- [Lucee latest 6.1](/examples/lucee-6.1) 
+- [Lucee latest 6.0](/examples/lucee-6.0) 
 - [Lucee with FusionReactor enabled](/examples/lucee-with-fr)
 - [Lucee as a Dockerfile only](/examples/lucee-as-dockerfile) (for those  who don't plan to or can't use Compose)
 
