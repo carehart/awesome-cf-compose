@@ -1,6 +1,6 @@
 services:
     lucee: 
-        image: lucee/lucee:6.1
+        image: lucee/lucee:latest
         volumes:
             - ./app:/var/www
         ports:
