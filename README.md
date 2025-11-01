@@ -60,6 +60,8 @@ Then the remainder of the page has additional introductory information about thi
 - [Lucee as a Dockerfile only](/examples/lucee-as-dockerfile) (for those  who don't plan to or can't use Compose)
 
 ## Examples of Commandbox images for ACF and Lucee
+- [Commandbox image with CF2025](/examples/cmdbox-cf2025) 
+- [Commandbox image with CF2025 (via cfengine env var)](/examples/cmdbox-cf2025-via-cfengine) 
 - [Commandbox image with latest Lucee 6](/examples/cmdbox-lucee-6-latest) 
 - [Commandbox image with latest Lucee 5](/examples/cmdbox-lucee-5-latest) 
 

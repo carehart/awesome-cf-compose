@@ -1,0 +1,13 @@
+services:
+    coldfusion: 
+        # this approach to naming the CF image does not allow specification of the specific update of CF, and may be a bit behind Adobe's latest
+        image: ortussolutions/commandbox:adobe2025
+        volumes:
+            - ./app:/app
+        ports:
+        - "8888:8080"
+        environment:
+        # if you want to see a CF admin, you must enable the commandbox "development" profile
+        - BOX_SERVER_PROFILE=development
+        # if you want to set a password in this file, set the next variable:
+        - cfconfig_adminPassword=testing123

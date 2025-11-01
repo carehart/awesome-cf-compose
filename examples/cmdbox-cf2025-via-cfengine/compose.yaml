@@ -1,0 +1,18 @@
+services:
+    coldfusion: 
+        # note that the generic commandbox image is called, but then specifically the jdk21 tag which is needed for CF2025.
+        # the CF version is set via the BOX_SERVER_APP_CFENGINE env var below
+        image: ortussolutions/commandbox:jdk21
+        volumes:
+            - ./app:/app
+        ports:
+        - "8888:8080"
+        environment:
+        # set the CF version and update level, via an env var.
+        # See the commandbox docs for the format of available values, at:
+        # https://commandbox.ortusbooks.com/embedded-server/multi-engine-support#server.json-configuration
+        - BOX_SERVER_APP_CFENGINE=adobe@2025
+        # if you want to see a CF admin, you must enable the commandbox "development" profile
+        - BOX_SERVER_PROFILE=development
+        # if you want to set a password in this file, set the next variable:
+        - cfconfig_adminPassword=testing123
